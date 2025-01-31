@@ -97,3 +97,14 @@
     }
   }
 }
+
+.template__heading--single {
+  .template__heading {
+    max-width: auto;
+    width: 100%; 
+    margin-bottom: 0px;
+    & h2 {
+      margin-bottom: 0px;
+    }
+  }
+}
