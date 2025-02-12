@@ -1,0 +1,48 @@
+.tabs {
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 60px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__list {
+    
+    display: none;
+  }
+  &__item {
+    margin-bottom: 60px;
+    &-image {
+      max-width: 353px;
+      margin-bottom: 24px;
+      & img {
+        width: 100%;
+      }
+    }
+    &-text {
+      & span {
+        color: $text-color;
+      }
+      & h3 {
+        margin: 16px 0px;
+      }
+    }
+    &-btn {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.tabs__list .active {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}

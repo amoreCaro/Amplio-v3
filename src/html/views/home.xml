@@ -1,65 +1,89 @@
 <% var data = { title: "Home" }; %>
 <%=_.template(require('./../includes/header.html').default)(data) %>
 <main class="page__main">
-    <%= _.template(require('./../includes/banner.html').default)({
-      title: "We Drive Change",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, exercitation ullamco laboris.",
-      image: "img/banner__image.png",
-      btn: {
-        text: "Learn More",
-        class: "btn-primary",
-      },
-      additionalClass: "banner--large" 
-    }) %>
-    <%= _.template(require('./../includes/quote.html').default)({
-      additionalClass: "quote--with-btn",
-        text: "Our focus on collaboration, transparency, and excellence has been the cornerstone of our approach, leading to the development of best-in-class Mission Critical facilities. With a collective experience of over 500 years in Data Centres, our team is uniquely positioned to ensure certainty of delivery and the delivery of high-quality finished products.",
-        btn: {
-          text: "Learn More",
-          class: "btn-primary",
-        },
-      }) %>
-      <%= _.template(require('./../includes/solutions.html').default)({}) %>
 
-      <%= _.template(require('./../includes/info.html').default)({
-        additionalClass: "info--small info--home",
-        contentClass: "",
-        decorPosition: "",
-        title: "It’s our people and expertise that make a difference",
-        text: "We bring the knowledge, skills and insights to engage and mobilise the stakeholders that matter, creating coalitions for impact.",
-        btn: {
-          text: "Learn More",
-          class: "btn-primary",
-        },
-        image: "img/info__image.png",
-        decor: [
-          "img/info__decor.png"
-        ],
-      }) %>
-      
-      <%= _.template(require('./../includes/partners.html').default)({
-        title: "In Good Company",
-        text: "We bring the knowledge, skills and insights to engage and mobilise the stakeholders that matter, creating coalitions for impact.",
-        image: "img/info__image.png",
-      }) %>
-      <%= _.template(require('./../includes/news.html').default)({
-        title: "News & <span>Insights</span>",
-        text: "We bring the knowledge, skills and insights to engage and mobilise the stakeholders that matter, creating coalitions for impact.",
-        image: "img/info__image.png",
-        btn: {
-          text: "Read More",
-          class: "btn-secondary",
-        },
-      }) %>
-      <%= _.template(require('./../includes/cta.html').default)({
-        title: "Talk to us about <br> your project",
-        image: "img/cta__image.png",
-        decor: "img/cta__decor.png",
-        btn: {
-          text: "Get in Touch",
-          class: "btn-primary",
-        }
-      }) %>
+<%= _.template(require('./../includes/credit.html').default)({
+  additionalClass: "", 
+  title: "Прості способи погашення кредиту",
+  creditList: [
+    { 
+      title: "В особистому  кабінеті Amplio", 
+      text: "Ви можете погасити у Amplio Ваш кредит онлайн не виходячи з дому. Просто перейдіть в особистий кабінет та сплатіть кредит банківською картою.",
+      image: [
+        `<svg width="155" height="100" viewBox="0 0 155 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g filter="url(#filter0_d_484_64)">
+            <rect x="30" y="26" width="95" height="40" rx="8" fill="white"/>
+          </g>
+          <g clip-path="url(#clip0_484_64)">
+            <path d="M85.0902 39.0247C81.5948 39.0247 78.471 40.8367 78.471 44.1837C78.471 48.0226 84.011 48.2877 84.011 50.2165C84.011 51.0286 83.0806 51.7555 81.4908 51.7555C79.2353 51.7555 77.5495 50.7398 77.5495 50.7398L76.828 54.1179C76.828 54.1179 78.7701 54.9759 81.3484 54.9759C85.17 54.9759 88.1776 53.0752 88.1776 49.6705C88.1776 45.6138 82.6144 45.3566 82.6144 43.5667C82.6144 42.9305 83.3782 42.2337 84.9631 42.2337C86.7514 42.2337 88.2101 42.9724 88.2101 42.9724L88.9163 39.7101C88.9163 39.7101 87.3285 39.0247 85.0897 39.0247H85.0902ZM53.1094 39.2711L53.0247 39.7634C53.0247 39.7634 54.4952 40.0324 55.8198 40.5696C57.5253 41.1851 57.6466 41.5438 57.9339 42.6565L61.0636 54.7216H65.2592L71.7227 39.2711H67.5369L63.3837 49.7759L61.6889 40.8712C61.5337 39.8521 60.7462 39.2706 59.7828 39.2706H53.1099L53.1094 39.2711ZM73.4061 39.2711L70.1226 54.7216H74.1142L77.3859 39.2711H73.4061ZM95.6685 39.2711C94.7061 39.2711 94.196 39.7865 93.822 40.6868L87.974 54.7216H92.1598L92.9695 52.3823H98.0689L98.5612 54.7216H102.255L99.0328 39.2711H95.6685ZM96.213 43.4455L97.4539 49.2432H94.13L96.2135 43.4455H96.213Z" fill="#1434CB"/>
+          </g>
+          <defs>
+            <filter id="filter0_d_484_64" x="0" y="0" width="155" height="100" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+              <feOffset dy="4"/>
+              <feGaussianBlur stdDeviation="15"/>
+              <feComposite in2="hardAlpha" operator="out"/>
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_484_64"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_484_64" result="shape"/>
+            </filter>
+            <clipPath id="clip0_484_64">
+              <rect width="49.2793" height="16" fill="white" transform="translate(53 39)"/>
+            </clipPath>
+          </defs>
+        </svg>`,
+                `<svg width="155" height="100" viewBox="0 0 155 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g filter="url(#filter0_d_484_64)">
+            <rect x="30" y="26" width="95" height="40" rx="8" fill="white"/>
+          </g>
+          <g clip-path="url(#clip0_484_64)">
+            <path d="M85.0902 39.0247C81.5948 39.0247 78.471 40.8367 78.471 44.1837C78.471 48.0226 84.011 48.2877 84.011 50.2165C84.011 51.0286 83.0806 51.7555 81.4908 51.7555C79.2353 51.7555 77.5495 50.7398 77.5495 50.7398L76.828 54.1179C76.828 54.1179 78.7701 54.9759 81.3484 54.9759C85.17 54.9759 88.1776 53.0752 88.1776 49.6705C88.1776 45.6138 82.6144 45.3566 82.6144 43.5667C82.6144 42.9305 83.3782 42.2337 84.9631 42.2337C86.7514 42.2337 88.2101 42.9724 88.2101 42.9724L88.9163 39.7101C88.9163 39.7101 87.3285 39.0247 85.0897 39.0247H85.0902ZM53.1094 39.2711L53.0247 39.7634C53.0247 39.7634 54.4952 40.0324 55.8198 40.5696C57.5253 41.1851 57.6466 41.5438 57.9339 42.6565L61.0636 54.7216H65.2592L71.7227 39.2711H67.5369L63.3837 49.7759L61.6889 40.8712C61.5337 39.8521 60.7462 39.2706 59.7828 39.2706H53.1099L53.1094 39.2711ZM73.4061 39.2711L70.1226 54.7216H74.1142L77.3859 39.2711H73.4061ZM95.6685 39.2711C94.7061 39.2711 94.196 39.7865 93.822 40.6868L87.974 54.7216H92.1598L92.9695 52.3823H98.0689L98.5612 54.7216H102.255L99.0328 39.2711H95.6685ZM96.213 43.4455L97.4539 49.2432H94.13L96.2135 43.4455H96.213Z" fill="#1434CB"/>
+          </g>
+          <defs>
+            <filter id="filter0_d_484_64" x="0" y="0" width="155" height="100" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+              <feOffset dy="4"/>
+              <feGaussianBlur stdDeviation="15"/>
+              <feComposite in2="hardAlpha" operator="out"/>
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_484_64"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_484_64" result="shape"/>
+            </filter>
+            <clipPath id="clip0_484_64">
+              <rect width="49.2793" height="16" fill="white" transform="translate(53 39)"/>
+            </clipPath>
+          </defs>
+        </svg>`
+      ] 
+    },
+    { 
+      title: "Через платіжні термінали",
+      text: "Оплата кредиту  в терміналі EasyPay та City24 – це швидко та зручно. Термінал Ви зможете знайти  у найближчому до Вас супермаркеті.",
+    },
+    { 
+      title: "В особистому  кабінеті Amplio",
+      text: "У будь-якому відділенні  Нової Пошти можна оплатити готівкою через касу  за номером телефону.",
+    },
+    { 
+      title: "В особистому  кабінеті Amplio", 
+      text: "Погасити/продовжити кредит у Amplio можна  в касах банків-партнерів.",
+    }
+  ]
+}) %>
+
+
+<%= _.template(require('./../includes/support.html').default)({
+  additionalClass: "", 
+  title: "Відповідаємо на часті запитання",
+  supportList: [
+    { text: "Наші переваги" },
+    { text: "Які документи потрібні для отримання кредиту" },
+    { text: "Як погасити кредит" }
+  ]
+}) %>
+
+
 </main>
-<%= _.template(require('./../includes/footer.html').default)(data) %>
-<%=_.template(require('./../includes/sidebar.html').default)(data) %>   
+

@@ -6,6 +6,7 @@
     min-height: 100vh;
   
     &__main {
+      background-color: $white-bg;
       flex: 1;
       max-width: 100%;
     }
