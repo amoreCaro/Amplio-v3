@@ -27,21 +27,23 @@
       padding: 30px;
       max-width: 260px;
       height: 357px;
-
-      & h3 {
-        font-size: 24px;
-        line-height: 28.8px;
-        font-weight: 400;
-        color: $default-black;
-        margin-bottom: 20px;
-      }
-
-      & p {
-        font-size: 14px;
-        line-height: 16.8px;
-        font-weight: 300;
-        color: #787878;
-        margin-bottom: 30px;
+      &-text {
+        height: 200px;
+        & h3 {
+          font-size: 24px;
+          line-height: 28.8px;
+          font-weight: 400;
+          color: $default-black;
+          margin-bottom: 20px;
+        }
+  
+        & p {
+          font-size: 14px;
+          line-height: 16.8px;
+          font-weight: 300;
+          color: #787878;
+          margin-bottom: 30px;
+        }
       }
     }
   }
@@ -114,17 +116,15 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column; 
-      
+      flex-direction: column;
     }
     &__title {
       display: flex;
-      justify-content: center; // Горизонтальне вирівнювання
-      align-items: center; // Вертикальне вирівнювання
+      justify-content: center;
+      align-items: center;
       max-width: 441px;
       text-align: center;
       & h2 {
-
         font-size: 48px;
         line-height: 48px;
       }
@@ -146,7 +146,7 @@
             font-size: 24px;
             line-height: 28.8px;
           }
-  
+
           & p {
             font-size: 14px;
             line-height: 16.8px;
@@ -157,14 +157,56 @@
     }
     &__images {
       gap: 10px;
-
       &-item {
         min-width: 115px;
         height: 40px;
-
         & img {
+          max-height: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .credit {
+    &__container {
+      max-width: 325px;
+    }
+    &__title {
+      max-width: 257px;
+
+      & h2 {
+        font-size: 28px;
+        line-height: 28px;
+      }
+    }
+
+    &__list {
+      margin-top: 40px;
+      gap: 20px;
+
+      &-item {
+        padding: 20px;
+        border-radius: 24px;
+        max-width: 320px;
+        width: 100%;
+        &-text {
+          max-width: 284px;
+          & h3 {
+            max-width: 192px;
+          }
 
 
+        }
+      }
+    }
+    &__images {
+      gap: 10px;
+      &-item {
+        min-width: 135px;
+        height: 40px;
+        & img {
           max-height: 40px;
         }
       }
