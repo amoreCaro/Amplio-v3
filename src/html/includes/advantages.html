@@ -14,19 +14,29 @@
                     <p><%= item.text %></p>
                 </div>
 
-                <div class="advantages__list-item-center">
-                    <div class="advantages__list-item-center-text">
-                        <p><%= item.centerText %></p>
+                <!-- Wrapper for center and bottom content -->
+                <div class="advantages__list-item-content-wrapper">
+                    <!-- Center content -->
+                    <div class="advantages__list-item-center">
+                        <div class="advantages__list-item-center-text">
+                            <p><%= item.centerText %></p>
+                        </div>
+                        <div class="advantages__list-item-center-image">
+                            <img src="<%= item.imageSrc %>" alt="<%= item.imageAlt %>" class="advantages__list-item-image">
+                        </div>
                     </div>
-                    <img src="<%= item.imageSrc %>" alt="<%= item.imageAlt %>" class="advantages__list-item-image">
+
+                    <!-- Bottom content -->
+                    <div class="advantages__list-item-bottom">
+                        <% if (item.bottomImageSrc) { %>
+                            <div class="advantages__list-item-bottom-image">
+                                <img src="<%= item.bottomImageSrc %>" alt="<%= item.bottomImageAlt %>" class="advantages__list-item-bottom-image">
+                            </div>
+                        <% } %>
+                        <p><%= item.bottomText %></p>
+                    </div>
                 </div>
 
-                <div class="advantages__list-item-bottom">
-                    <div class="advantages__list-item-bottom-image">
-                        <img src="<%= item.bottomImageSrc %>" alt="<%= item.bottomImageAlt %>" class="advantages__list-item-bottom-image--small">
-                    </div>     
-                    <p><%= item.bottomText %></p>
-                </div>
             </div>
             <% }); %>
         </div>

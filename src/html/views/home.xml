@@ -17,11 +17,11 @@
       },
       { 
         text: "Нам не потрібні застава  та поручителі",
-        imageSrc: 'img/advantages__image-2.png',
+        imageSrc: 'img/advantages__image-2.png'
       },
       { 
         text: "Видаємо кредит  за <b> 30 хвилин</b>",
-        imageSrc: 'img/advantages__image-3.png',
+        imageSrc: 'img/advantages__image-3.png', 
         centerText: 'Отримайте переказ через:', 
         bottomImageSrc: 'img/advantages__image-3.2.png',
         bottomText: 'Старт',
