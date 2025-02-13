@@ -1,54 +1,60 @@
 .credit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    max-width: 1160px;
+  }
+
+  &__list {
+    margin-top: 33px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    &__container {
-      max-width: 1160px;
-    }
-  
-    &__list {
-      margin-top: 33px;
-      display: flex;
-      gap: 40px;
-  
-      &-item {
-        background-color: $white;
-        border-radius: 32px;
-        padding: 30px;
-        max-width: 260px;
-        height: 357px;
-  
-        & h3 {
-          font-size: 24px;
-          line-height: 28.8px;
-          font-weight: 400;
-          color: $default-black;
-          margin-bottom: 20px;
-        }
-  
-        & p {
-          font-size: 14px;
-          line-height: 16.8px;
-          font-weight: 300;
-          color: #787878;
-          margin-bottom: 30px;
-        }
-  
-        &__images {
-          display: flex;
-          flex-direction: column; 
-          gap: 10px; 
-        }
-  
-        &__image {
-          max-width: 95px; 
-          height: 40px; 
-          & svg {
-            width: 100%;
-          }
-        }
+    gap: 40px;
+    flex-wrap: wrap; // Дозволяє елементам переноситися на новий рядок, якщо потрібно
+
+    &-item {
+      background-color: $white;
+      border-radius: 32px;
+      padding: 30px;
+      max-width: 260px;
+      height: 357px;
+
+      & h3 {
+        font-size: 24px;
+        line-height: 28.8px;
+        font-weight: 400;
+        color: $default-black;
+        margin-bottom: 20px;
+      }
+
+      & p {
+        font-size: 14px;
+        line-height: 16.8px;
+        font-weight: 300;
+        color: #787878;
+        margin-bottom: 30px;
       }
     }
   }
-  
+  &__images {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+
+    &-item {
+      min-width: 95px;
+      height: 40px;
+      flex: 1;
+      & img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        min-height: 60px;
+
+      }
+    }
+  }
+}

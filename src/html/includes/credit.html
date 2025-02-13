@@ -1,24 +1,24 @@
 <section class="credit section <%= additionalClass %>">
-    <div class="credit__container">
-      <h2><%= title %></h2>
-      <div class="credit__list">
-        <% creditList.forEach(function(item) { %>
-          <div class="credit__list-item">
-            <h3><%= item.title %></h3>
-            <p><%= item.text %></p>
-  
-            <% if (item.image && item.image.length > 0) { %>
-              <div class="credit__images">
-                <% item.image.forEach(function(svg) { %>
-                  <div class="credit__image">
-                    <%= svg %> 
-                  </div>
-                <% }); %>
-              </div>
-            <% } %>
-          </div>
-        <% }); %>
-      </div>
+  <div class="credit__container">
+    <h2><%= title %></h2>
+    <div class="credit__list">
+      <% creditList.forEach(function(item) { %>
+        <div class="credit__list-item">
+          <h3><%= item.title %></h3>
+          <p><%= item.text %></p>
+
+          <% if (item.image && item.image.length > 0) { %>
+            <div class="credit__images">
+              <% item.image.forEach(function(img) { %>
+                <div class="credit__images-item">
+                  <!-- Додаємо <img> для кожного елемента в масиві item.image -->
+                  <img src="<%= img %>" alt="Image for <%= item.title %>" />
+                </div>
+              <% }); %>
+            </div>
+          <% } %>
+        </div>
+      <% }); %>
     </div>
-  </section>
-  
+  </div>
+</section>
