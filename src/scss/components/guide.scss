@@ -237,8 +237,11 @@
         }
 
         &__decor {
-          top: -80%;
-          left: 29%;
+            transform: rotate(90deg);
+            left: 0px;
+            width: 32px;
+            height: 65px;
+            top: 94%;
         }
       }
     }
