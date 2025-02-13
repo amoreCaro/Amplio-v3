@@ -23,21 +23,25 @@
       left: -8px;
       width: 225px;
       text-align: left;
-      & span {
-        position: relative;
-        top: 10px;
-        font-size: 96px;
-        line-height: 96px;
-        font-weight: 300;
-        color: $blue;
+      &-text {
+        display: block;
+        & span {
+          position: relative;
+          top: 10px;
+          font-size: 96px;
+          line-height: 96px;
+          font-weight: 300;
+          color: $blue;
+        }
+        & p {
+          margin-top: 22px;
+          font-size: 20px;
+          line-height: 24px;
+          font-weight: 300;
+          color: $text-color;
+        }
       }
-      & p {
-        margin-top: 22px;
-        font-size: 20px;
-        line-height: 24px;
-        font-weight: 300;
-        color: $text-color;
-      }
+
       &__decor {
         top: -56%;
         left: 47%;
@@ -63,9 +67,9 @@
   &__btn {
     margin-bottom: 36px;
     & a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
@@ -81,7 +85,7 @@
     }
     &__list {
       display: flex;
-      margin-top: 90px;
+      //   margin-top: 90px;
       &-item {
         margin-right: 25px;
         top: -26px;
@@ -133,7 +137,7 @@
 
     &__list {
       display: flex;
-      margin-top: 90px;
+      //   margin-top: 90px;
 
       &-item {
         margin-right: 80px;
@@ -166,7 +170,7 @@
       text-align: center;
       flex-direction: row;
       justify-content: center;
-      align-items: center;  
+      align-items: center;
       & p {
         font-size: 12px;
         line-height: 14.4px;
@@ -174,9 +178,86 @@
     }
 
     &__btn {
-        margin-right: 40px;
-        margin-bottom: 0px;
-        margin-left: -66px;
+      margin-right: 40px;
+      margin-bottom: 0px;
+      margin-left: -66px;
+    }
+    &__bottom {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .guide {
+    &__container {
+      max-width: 321px;
+    }
+
+    &__title {
+      max-width: 251px;
+      margin: 0 auto; // This centers the title
+      & h2 {
+        font-size: 28px;
+        line-height: 28px;
+      }
+    }
+
+    &__list {
+      margin-top: 30px;
+      display: block;
+      margin-bottom: 48px;
+      margin-left: 24px;
+      top: -9px;
+      position: relative;
+
+      &-item {
+        margin-right: 0px;
+        top: 0px;
+        max-width: 250px;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 40px;
+        &-text {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          & span {
+            font-size: 64px;
+            line-height: 64px;
+            margin-right: 38px;
+          }
+
+          & p {
+            margin-top: 0px;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: left;
+          }
+        }
+
+        &__decor {
+          top: -80%;
+          left: 29%;
+        }
+      }
+    }
+
+    &__left {
+      margin-top: 80px;
+      display: block;
+      text-align: center;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      & p {
+        font-size: 14px;
+        line-height: 16.8px;
+      }
+    }
+
+    &__btn {
+      margin: 96px 0px 20px 0px;
     }
     &__bottom {
       display: block;
