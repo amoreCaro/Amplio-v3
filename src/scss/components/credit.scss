@@ -58,7 +58,7 @@
       & img {
         width: 100%;
         height: auto;
-        object-fit: cover;
+        object-fit: none;
         min-height: 60px;
       }
     }
@@ -99,11 +99,7 @@
       &-item {
         min-width: 76px;
         height: 32px;
-        flex: 1;
         & img {
-          width: 100%;
-          height: auto;
-          object-fit: cover;
           min-height: 32px;
         }
       }
@@ -165,11 +161,10 @@
       &-item {
         min-width: 115px;
         height: 40px;
-        flex: 1;
+
         & img {
-          width: 100%;
-          height: auto;
-          object-fit: cover;
+
+
           max-height: 40px;
         }
       }

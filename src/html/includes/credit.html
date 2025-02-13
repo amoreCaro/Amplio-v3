@@ -14,10 +14,10 @@
           <% if (item.image && item.image.length > 0) { %>
             <div class="credit__images">
               <% item.image.forEach(function(img) { %>
-                <div class="credit__images-item">
+                <a class="credit__images-item" href="#">
                   <!-- Додаємо <img> для кожного елемента в масиві item.image -->
                   <img src="<%= img %>" alt="Image for <%= item.title %>" />
-                </div>
+                </a>
               <% }); %>
             </div>
           <% } %>
