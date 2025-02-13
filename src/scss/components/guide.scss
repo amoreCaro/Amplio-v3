@@ -10,6 +10,7 @@
     font-weight: 400;
     font-size: 56px;
     line-height: 56px;
+    word-wrap: break-word;
   }
 
   &__list {
@@ -21,8 +22,7 @@
       top: -8px;
       left: -8px;
       width: 225px;
-      //   width: 100%;
-      //   height: 166px;
+      text-align: left;
       & span {
         position: relative;
         top: 10px;
@@ -63,8 +63,9 @@
   &__btn {
     margin-bottom: 36px;
     & a {
-      display: flex;
-      align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
   }
 }
@@ -111,6 +112,74 @@
       font-size: 16px;
       line-height: 16px;
       margin-bottom: 20px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .guide {
+    &__container {
+      max-width: 680px;
+      text-align: center;
+    }
+
+    &__title {
+      max-width: 431px;
+      margin: 0 auto; // This centers the title
+      & h2 {
+        font-size: 48px;
+        line-height: 48px;
+      }
+    }
+
+    &__list {
+      display: flex;
+      margin-top: 90px;
+
+      &-item {
+        margin-right: 80px;
+        top: -26px;
+        width: 210px;
+        text-align: left;
+
+        & span {
+          font-size: 96px;
+          line-height: 96px;
+        }
+
+        & p {
+          margin-top: 30px;
+          font-size: 16px;
+          line-height: 19px;
+          text-align: left;
+        }
+
+        &__decor {
+          top: -80%;
+          left: 29%;
+        }
+      }
+    }
+
+    &__left {
+      margin-top: 80px;
+      display: flex;
+      text-align: center;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;  
+      & p {
+        font-size: 12px;
+        line-height: 14.4px;
+      }
+    }
+
+    &__btn {
+        margin-right: 40px;
+        margin-bottom: 0px;
+        margin-left: -66px;
+    }
+    &__bottom {
+      display: block;
     }
   }
 }
