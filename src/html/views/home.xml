@@ -33,6 +33,49 @@
     },
     text: "Натискаючи кнопку “Розрахувати кредит”  <br>ви даєте згоду на обробку персональних даних "
 }) %>
+<%= _.template(require('./../includes/calculator.html').default)({
+    additionalClass: "", 
+    title: "Розрахуйте та подайте заявку на отримання кредиту",
+    calculator: {
+      inputId: "calculatorInput", // id елемента input
+      inputMin: 0, // мінімальне значення для input
+      inputMax: 100, // максимальне значення для input
+      inputStep: 1, // крок для input
+      inputValue: 50, // початкове значення input
+      amountText: "50", // текст для відображення значення
+      label: "Сума кредиту", // підпис для input
+      newField1Id: "field1", // id для нового поля
+      newField1Label: "Номер телефону", // підпис для нового поля
+      newField1Value: "", // значення нового поля
+      newField2Id: "field2", // id для другого нового поля
+      newField2Label: "Email", // підпис для другого нового поля
+      newField2Value: "", // значення для другого нового поля
+      ctaImageUrl: "img/calcuator-wallet.png", // URL картинки для CTA
+      ctaText: "Щомісячний платіж", // текст для CTA
+      ctaSubtitle: "27 000 грн",
+      additionalInfo: "Ці розрахунки є орієнтовними", 
+      infoSections: [
+          {
+              imageUrl: "img/calculator__info-1.png",
+              text: "Загальні витрати за кредитом, грн",
+              subtitle: "27 000 грн"
+          },
+          {
+              imageUrl: "img/calculator__info-2.png",
+              text: "Загальна вартість кредиту, грн",
+              subtitle: "27 000 грн"
+          },
+      ]
+    },
+    btn: {
+        class: "btn-large",
+        text: "Отримати кредит",
+        imgSrc: "img/calculator.png",
+        link: "/apply" 
+    }
+}) %>
+
+
 <%= _.template(require('./../includes/guide.html').default)({
     additionalClass: "", 
     title: "Отримайте кредит за 3 кроки",

@@ -1,0 +1,99 @@
+.calculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__container {
+    border-radius: 48px;
+    padding: 65px 60px 60px 60px;
+    max-width: 1280px;
+    background-color: $blue-bg;
+  }
+  &__content {
+    border-radius: 32px;
+    padding: 10px 0px;
+    background-color: $blue;
+    &-inner {
+      border-radius: 32px;
+      padding: 60px;
+      background-color: $white;
+      display: flex;
+    }
+  }
+  &__left {
+    margin-right: 77px;
+  }
+  &__title {
+    max-width: 562px;
+    & h2 {
+      font-size: 40px;
+      line-height: 40px;
+      color: $black;
+    }
+  }
+  &__cta {
+    display: block;
+    background-color: $blue-bg;
+    padding: 30px;
+    border-radius: 32px;
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 82px;
+
+    &-top {
+      display: flex;
+      margin-bottom: 30px;
+
+      &-text {
+        margin-left: 30px;
+        & p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 16px;
+          color: $text-color--light;
+          margin-bottom: 10px;
+        }
+        & span {
+          font-weight: 400;
+          font-size: 32px;
+          line-height: 32px;
+          color: $black;
+        }
+      }
+    }
+    &-img {
+    }
+    &-btn {
+      margin-bottom: 20px;
+    }
+  }
+  &__info {
+    &-item {
+      display: flex;
+      align-items: center;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+    &-img {
+      max-width: 24px;
+      margin-right: 10px;
+      & img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &-text {
+      color: #929292;
+      font-weight: 400;
+      & p {
+        font-size: 14px;
+        line-height: 14px;
+        margin-bottom: 10px;
+      }
+      & span {
+        font-size: 20px;
+        line-height: 20px;
+      }
+    }
+  }
+}
