@@ -2,6 +2,37 @@
 <%=_.template(require('./../includes/header.html').default)(data) %>
 <main class="page__main">
 
+<%= _.template(require('./../includes/advantages.html').default)({
+    additionalClass: "", 
+    title: "Чому обирають нас",
+    subtitle: "Amplio — компанія , яка спеціалізуємться на кредитуванні підприємців в Україні",
+    advantagesList: [
+      { 
+        text: "Тільки онлайн, вам  нетреба нікуди їхати",
+        imageSrc: 'img/successful_operation.png',
+          
+            bottomImageSrc: 'img/money.png',
+            bottomImageAlt: 'Надійність внизу',
+            bottomText: '<span> Отримано зарахування</span> 80,000 грн.'
+      },
+      { 
+        text: "Нам не потрібні застава  та поручителі",
+        imageSrc: 'img/advantages__image-2.png',
+      },
+      { 
+        text: "Видаємо кредит  за <b> 30 хвилин</b>",
+        imageSrc: 'img/advantages__image-3.png',
+        centerText: 'Отримайте переказ через:', 
+        bottomImageSrc: 'img/advantages__image-3.2.png',
+        bottomText: 'Старт',
+      }
+    ],
+    btn: {
+      text: "Розрахувати кредит",
+      class: "btn-primary",
+    },
+    text: "Натискаючи кнопку “Розрахувати кредит”  <br>ви даєте згоду на обробку персональних даних "
+}) %>
 <%= _.template(require('./../includes/guide.html').default)({
     additionalClass: "", 
     title: "Отримайте кредит за 3 кроки",
