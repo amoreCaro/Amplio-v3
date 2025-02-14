@@ -22,12 +22,10 @@ body {
   align-content: center;
 }
 
-.h-between {
+.h-center {
   display: flex;
+  justify-content: center;
   align-items: center;
-  width: 100%;
-  justify-content: space-between;
-  flex-direction: row;
 }
 
 .material-symbols-outlined {
