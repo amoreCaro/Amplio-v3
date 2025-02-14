@@ -35,72 +35,57 @@
 }) %>
 
 <%= _.template(require('./../includes/tabs.html').default)({
-        additionalClass: "",
-        decor: "img/tabs__image.png",
-        title: "Усе, що треба",
-        buttons: [
-            { 
-                text: "Умови", 
-                class: "btn-tabs openTab active",
-                tabTarget: "tabs-all"
-            },
-            { 
-                text: "Документи", 
-                class: "btn-tabs openTab",
-                tabTarget: "tabs-news"  
-            },
-            { 
-                text: "Вимоги", 
-                class: "btn-tabs openTab",
-                tabTarget: "tabs-events" 
-            },
-        ],
-        groupItems: [
-            {
-                id: "tabs-all", 
-                items: [
-                   {
-                    title: "Номінальна ставка",
-                    text:"<span>0,01%</span> річних"
-                   }, 
-                   {
-                    title: "Термін",
-                    text:"до <span>36 міс.</span>"
-                   },
-                   {
-                    title: "Сума",
-                    text:"<span>до 200 тис.</span> грн."
-                   }, 
-                   {
-                    title: "Одноразова комісія",
-                    text:"<span>6,9%</span>"
-                   },
-                   {
-                    title: "Щомісячна комісія",
-                    text:"<span>6,9%</span>"
-                   }
-                ]
-            },
-            {
-                id: "tabs-news", 
-                items: [
-                   {
-                    title: "vfdfvd",
-                    text:"aaaaa"
-                   }
-                ]
-            },
-            {
-                id: "tabs-events", 
-                items: [
-                   {
-                    title: "vfdfvd",
-                    text:"bbbbbb"
-                   }
-                ]
+    additionalClass: "",
+    decor: "img/tabs__image.png",
+    title: "Усе, що треба",
+    buttons: [
+        { 
+            text: "Умови", 
+            class: "btn-tabs openTab active",
+            tabTarget: "tabs-all"
+        },
+        { 
+            text: "Документи", 
+            class: "btn-tabs openTab",
+            tabTarget: "tabs-news"  
+        },
+        { 
+            text: "Вимоги", 
+            class: "btn-tabs openTab",
+            tabTarget: "tabs-events" 
+        },
+    ],
+    groupItems: [
+        {
+            id: "tabs-all", 
+            items: [
+                { title: "Номінальна ставка", text: "<span>0,01%</span> річних" },
+                { title: "Термін", text: "до <span>36 міс.</span>" },
+                { title: "Сума", text: "<span>до 200 тис.</span> грн." },
+                { title: "Одноразова комісія", text: "<span>6,9%</span>" },
+                { title: "Щомісячна комісія", text: "<span>6,9%</span>" }
+            ],
+            btn: {
+                class: "btn-large",
+                text: "Отримати кредит",
+                imgSrc: "img/calculator.png",
+                link: "/apply" 
             }
-        ]
-    }) %>
+        },
+        {
+            id: "tabs-news", 
+            items: [
+                { title: "vfdfvd", text: "aaaaa" }
+            ]
+        },
+        {
+            id: "tabs-events", 
+            items: [
+                { title: "vfdfvd", text: "bbbbbb" }
+            ]
+        }
+    ]
+}) %>
 
 <%= _.template(require('./../includes/calculator.html').default)({
     additionalClass: "", 

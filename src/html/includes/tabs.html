@@ -7,30 +7,37 @@
 
       <div class="tabs__buttons">
         <% buttons.forEach(function(button) { %>
-        <button
-          class="btn <%= button.class %>"
-          data-tab-target="<%= button.tabTarget %>"
-        >
-          <%= button.text %>
-        </button>
+          <button
+            class="btn <%= button.class %>"
+            data-tab-target="<%= button.tabTarget %>"
+          >
+            <%= button.text %>
+          </button>
         <% }); %>
       </div>
 
       <% groupItems.forEach(function(groupItem) { %>
-      <div class="tabs__list" id="<%= groupItem.id %>">
-        <% groupItem.items.forEach(function(item) { %>
-        <div class="tabs__item">
-          <!-- Виведення <li> з класом colored-bullet для кожного елементу -->
-          <ul class="colored-bullet">
-            <li ><%= item.title %></li>
-          </ul>
+        <div class="tabs__list" id="<%= groupItem.id %>">
+          <% groupItem.items.forEach(function(item) { %>
+            <div class="tabs__item">
+              <ul class="colored-bullet">
+                <li><%= item.title %></li>
+              </ul>
 
-          <!-- Виведення тексту в <p> -->
-          <p><%= item.text %></p>
+              <p><%= item.text %></p>
+            </div>
+          <% }); %>
+
+          <!-- Render Call to Action Button -->
+          <% if (groupItem.btn) { %>
+            <div class="tabs__item-btn">
+              <a href="<%= groupItem.btn.link %>" class="btn <%= groupItem.btn.class %>">
+                <img src="<%= groupItem.btn.imgSrc %>" alt="Button Image" />
+                <%= groupItem.btn.text %>
+              </a>
+            </div>
+          <% } %>
         </div>
-        <% }); %>
-      </div>
-
       <% }); %>
     </div>
 
@@ -41,3 +48,4 @@
     </div>
   </div>
 </section>
+
