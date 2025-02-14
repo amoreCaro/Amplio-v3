@@ -70,8 +70,10 @@
                                 <img src="<%= btn.imgSrc %>" alt="calculator button" class="btn-icon" />
                             </a>
                         </div>
-                        
-                        <span><%= calculator.additionalInfo %></span>
+                        <div class="calculator__cta-top-info">
+
+                            <span><%= calculator.additionalInfo %></span>
+                        </div>
                     </div>
                     <div class="calculator__info">
                         <% calculator.infoSections.forEach(function(section) { %>

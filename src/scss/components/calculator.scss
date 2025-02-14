@@ -38,12 +38,14 @@
     max-width: 400px;
     width: 100%;
     margin-bottom: 82px;
+
     &-img {
       max-width: 60px;
       & img {
         width: 100%;
       }
     }
+
     &-top {
       display: flex;
       margin-bottom: 30px;
@@ -410,12 +412,54 @@
         width: 100%;
         font-size: 24px !important;
         line-height: 24px !important;
-        // margin-top: 10px;
       }
     }
     &__buttons {
       gap: 7px;
     }
+    &__left {
+      margin-bottom: 4px;
+    }
+    &__cta {
+      background: none;
+      margin-bottom: -30px;
+      &-btn {
+        margin-top: 36px;
+      }
+      & img {
+        max-width: 48px;
+      }
+      &-top-info {
+        & span {
+          font-size: 14px;
+          line-height: 16.8px;
+          color: #303030;
+        }
+      }
+    }
+    &__info {
+      display: block;
+      border-radius: 24px;
+      margin-left: 0px;
+      background: #f5f5f5;
+      padding: 20px;
+      width: 100%;
+      gap: 30px;
+      &-text {
+        & p {
+          font-size: 12px;
+          line-height: 14px;
+        }
+        & span {
+          font-size: 20px;
+          line-height: 20px;
+        }
+        
+      }
+    }
+    .calculator__info-item:not(:last-child) {
+      margin-bottom: 30px;
+  }
     .calculator__input-group {
       margin-bottom: 30px;
     }
