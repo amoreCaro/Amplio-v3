@@ -37,35 +37,43 @@
     additionalClass: "", 
     title: "Розрахуйте та подайте заявку на отримання кредиту",
     calculator: {
-      inputId: "calculatorInput", // id елемента input
-      inputMin: 0, // мінімальне значення для input
-      inputMax: 100, // максимальне значення для input
-      inputStep: 1, // крок для input
-      inputValue: 50, // початкове значення input
-      amountText: "50", // текст для відображення значення
-      label: "Сума кредиту", // підпис для input
-      newField1Id: "field1", // id для нового поля
-      newField1Label: "Номер телефону", // підпис для нового поля
-      newField1Value: "", // значення нового поля
-      newField2Id: "field2", // id для другого нового поля
-      newField2Label: "Email", // підпис для другого нового поля
-      newField2Value: "", // значення для другого нового поля
-      ctaImageUrl: "img/calcuator-wallet.png", // URL картинки для CTA
-      ctaText: "Щомісячний платіж", // текст для CTA
-      ctaSubtitle: "27 000 грн",
-      additionalInfo: "Ці розрахунки є орієнтовними", 
-      infoSections: [
-          {
-              imageUrl: "img/calculator__info-1.png",
-              text: "Загальні витрати за кредитом, грн",
-              subtitle: "27 000 грн"
-          },
-          {
-              imageUrl: "img/calculator__info-2.png",
-              text: "Загальна вартість кредиту, грн",
-              subtitle: "27 000 грн"
-          },
-      ]
+        fields: [
+            {
+                inputId: "calculatorInput1", 
+                inputMin: 1000,
+                inputMax: 200000,
+                inputStep: 1,
+                inputValue: 50,
+            
+                label: "Сума кредиту"
+            },
+            {
+                inputId: "calculatorInput1", 
+                inputMin: 1,
+                inputMax: 24,
+                inputStep: 1,
+                inputValue: 6,
+                minAmount: "6 місяців",
+                maxAmount: "24 місяців",
+                label: "Термін"
+            }
+        ],
+        ctaImageUrl: "img/calcuator-wallet.png", 
+        ctaText: "Щомісячний платіж", 
+        ctaSubtitle: "27 000 грн",
+        additionalInfo: "Ці розрахунки є орієнтовними", 
+        infoSections: [
+            {
+                imageUrl: "img/calculator__info-1.png",
+                text: "Загальні витрати за кредитом, грн",
+                subtitle: "27 000 грн"
+            },
+            {
+                imageUrl: "img/calculator__info-2.png",
+                text: "Загальна вартість кредиту, грн",
+                subtitle: "27 000 грн"
+            }
+        ]
     },
     btn: {
         class: "btn-large",

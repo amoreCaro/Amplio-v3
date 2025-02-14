@@ -1,112 +1,91 @@
 <section class="calculator section <%= additionalClass %>">
     <div class="calculator__container">
-      <div class="calculator__content">
-        <div class="calculator__content-inner">
-          <div class="calculator__left">
-            <div class="calculator__title">
-              <h2><%= title %></h2>
-            </div>
-              <!-- Контейнер для input, label та p -->
-              <div class="calculator__input-group">
-                <label for="<%= calculator.inputId %>" class="calculator__label">
-                  <%= calculator.label %>
-                </label>
-  
-                <!-- Введення цифр вручну -->
-                <input
-                  type="text"
-                  id="<%= calculator.inputId %>"
-                  min="<%= calculator.inputMin %>"
-                  max="<%= calculator.inputMax %>"
-                  step="<%= calculator.inputStep %>"
-                  value="<%= calculator.inputValue %>"
-                  class="calculator__input-number"
-                  oninput="updateAmount()"
-                />
-  
-                <!-- Слайдер для вибору значення -->
-                <input
-                  type="range"
-                  id="<%= calculator.inputId %>_range"
-                  min="<%= calculator.inputMin %>"
-                  max="<%= calculator.inputMax %>"
-                  step="<%= calculator.inputStep %>"
-                  value="<%= calculator.inputValue %>"
-                  class="calculator__slider slider"
-                  oninput="updateAmount()"
-                />
-  
-                <p id="amountDisplay" class="calculator__amount-display">
-                  <%= calculator.amountText %>
-                </p>
-              </div>
-              <!-- кінець контейнера -->
-
-  
-            <!-- Нові поля -->
-            <div class="calculator__new-fields">
-              <div class="calculator__field">
-                <label for="<%= calculator.newField1Id %>" class="calculator__label">
-                  <%= calculator.newField1Label %>
-                </label>
-                <input
-                  type="text"
-                  id="<%= calculator.newField1Id %>"
-                  value="<%= calculator.newField1Value %>"
-                  class="calculator__input"
-                />
-              </div>
-  
-              <div class="calculator__field">
-                <label for="<%= calculator.newField2Id %>" class="calculator__label">
-                  <%= calculator.newField2Label %>
-                </label>
-                <input
-                  type="text"
-                  id="<%= calculator.newField2Id %>"
-                  value="<%= calculator.newField2Value %>"
-                  class="calculator__input"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="calculator__right">
-            <div class="calculator__cta">
-                <div class="calculator__cta-top">
-                    <div class="calculator__cta-img">
-                        <img src="<%= calculator.ctaImageUrl %>" alt="CTA image" />
-                      </div>
-                      <div class="calculator__cta-top-text">
-                        <p><%= calculator.ctaText %></p>
-                        <span><%= calculator.ctaSubtitle %></span>
-                      </div>
-                </div>
-
-                <div class="calculator__cta-btn">
-                    <a href="<%= btn.link %>" class="btn <%= btn.class %>" target="_blank">
-                        <%= btn.text %>
-                        <img src="<%= btn.imgSrc %>" alt="<%= btn.imgAlt %>" class="btn-icon" />
-                    </a>
-                </div>
-                
-            <span><%= calculator.additionalInfo%></span>
-            </div>
-            <div class="calculator__info">
-                <% calculator.infoSections.forEach(function(section) { %>
-                    <div class="calculator__info-item">
-                        <div class="calculator__info-img">
-                            <img src="<%= section.imageUrl %>" alt="Info image" />
-                        </div>
-                        <div class="calculator__info-text">
-                            <p><%= section.text %></p>
-                            <span><%= section.subtitle %></span>
-                        </div>
+        <div class="calculator__content">
+            <div class="calculator__content-inner">
+                <div class="calculator__left">
+                    <div class="calculator__title">
+                        <h2><%= title %></h2>
                     </div>
-                <% }); %>
+
+                    <% calculator.fields.forEach(function(field) { %>
+                        <div class="calculator__input-group">
+                            <label for="<%= field.inputId %>" class="calculator__label">
+                                <%= field.label %>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="<%= field.inputId %>"
+                                min="<%= field.inputMin %>"
+                                max="<%= field.inputMax %>"
+                                step="<%= field.inputStep %>"
+                                value="<%= field.inputValue %>"
+                                class="calculator__input-number"
+                                oninput="updateAmount()"
+                            />
+
+                            <input
+                                type="range"
+                                id="<%= field.inputId %>_range"
+                                min="<%= field.inputMin %>"
+                                max="<%= field.inputMax %>"
+                                step="<%= field.inputStep %>"
+                                value="<%= field.inputValue %>"
+                                class="calculator__slider slider"
+                                oninput="updateAmount()"
+                            />
+
+                            <div id="amountDisplay" class="calculator__amount-display">
+                                <p><%= field.minAmount %></p>
+                                <p><%= field.maxAmount %></p>
+                            </div>
+                        </div>
+                    <% }); %>
+
+<!-- 
+                    <div class="calculator__cta-btn">
+                        <a href="<%= btn.link %>" class="btn <%= btn.class %>" target="_blank">
+                            <%= btn.text %>
+                            <img src="<%= btn.imgSrc %>" alt="calculator button" class="btn-icon" />
+                        </a>
+                    </div> -->
+                </div>
+                <div class="calculator__right">
+                    <div class="calculator__cta">
+                        <div class="calculator__cta-top">
+                            <div class="calculator__cta-img">
+                                <img src="<%= calculator.ctaImageUrl %>" alt="CTA image" />
+                            </div>
+                            <div class="calculator__cta-top-text">
+                                <p><%= calculator.ctaText %></p>
+                                <span><%= calculator.ctaSubtitle %></span>
+                            </div>
+                        </div>
+
+                        <div class="calculator__cta-btn">
+                            <a href="<%= btn.link %>" class="btn <%= btn.class %>" target="_blank">
+                                <%= btn.text %>
+                                <img src="<%= btn.imgSrc %>" alt="calculator button" class="btn-icon" />
+                            </a>
+                        </div>
+                        
+                        <span><%= calculator.additionalInfo %></span>
+                    </div>
+                    <div class="calculator__info">
+                        <% calculator.infoSections.forEach(function(section) { %>
+                            <div class="calculator__info-item">
+                                <div class="calculator__info-img">
+                                    <img src="<%= section.imageUrl %>" alt="Info image" />
+                                </div>
+                                <div class="calculator__info-text">
+                                    <p><%= section.text %></p>
+                                    <span><%= section.subtitle %></span>
+                                </div>
+                            </div>
+                        <% }); %>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </section>
-  
+</section>
