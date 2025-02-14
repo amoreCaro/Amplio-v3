@@ -7,6 +7,50 @@
     font-size: 16px;
     line-height: 20px;
   }
+  &-tabs {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.6px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      width: calc(100% + 40px);
+      height: 1px;
+      background-color: #bcbcbc;
+    }
+    &.active {
+      color: $default-black;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        width: calc(100% + 40px);
+        height: 1px;
+        background-color: $blue;
+      }
+    }
+  }
+  &-calculator-tabs {
+    background-color: #eee;
+    color: $default-black;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 7px 14px;
+    border-radius: 4px;
+    &.active {
+      color: $blue;
+      background: #2046D21A;
+    }
+    &:hover {
+      color: $blue;
+      background: #2046D21A;
+      transition: $transition;
+    }
+  }
 
   &-primary {
     width: 100%;

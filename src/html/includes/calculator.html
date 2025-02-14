@@ -41,14 +41,16 @@
                             </div>
                         </div>
                     <% }); %>
-
-<!-- 
-                    <div class="calculator__cta-btn">
-                        <a href="<%= btn.link %>" class="btn <%= btn.class %>" target="_blank">
-                            <%= btn.text %>
-                            <img src="<%= btn.imgSrc %>" alt="calculator button" class="btn-icon" />
-                        </a>
-                    </div> -->
+                    <div class="calculator__buttons">
+                        <% buttons.forEach(function(button) { %>
+                        <button
+                          class="btn <%= button.class %>"
+                          data-tab-target="<%= button.calculatorTabTarget %>"
+                        >
+                          <%= button.text %>
+                        </button>
+                        <% }); %>
+                      </div>
                 </div>
                 <div class="calculator__right">
                     <div class="calculator__cta">

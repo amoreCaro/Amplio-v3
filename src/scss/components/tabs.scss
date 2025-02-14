@@ -1,21 +1,29 @@
 .tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &__container {
+    max-width: 1220px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  }
+  &__title {
+    margin-bottom: 60px;
+    & h2 {
+      font-weight: 400;
+      font-size: 56px;
+      line-height: 56px;
+    }
   }
 
   &__buttons {
     display: flex;
-    gap: 12px;
+    gap: 30px;
     margin-bottom: 60px;
     justify-content: center;
     align-items: center;
   }
 
   &__list {
-    
     display: none;
   }
   &__item {
@@ -43,6 +51,5 @@
 }
 
 .tabs__list .active {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: block;
 }
