@@ -67,6 +67,10 @@
     }
   }
   &__info {
+    margin-left: 29px;
+    bottom: -8px;
+    position: relative;
+
     &-item {
       display: flex;
       align-items: center;
@@ -83,6 +87,7 @@
       }
     }
     &-text {
+      margin-left: 10px;
       color: #929292;
       font-weight: 400;
       & p {
@@ -147,6 +152,9 @@
       cursor: pointer;
       border: none; /* Відсутність бордера на повзунку */
     }
+  }
+  &__buttons {
+    margin-top: -18px;
   }
   &__amount-display {
     display: flex;

@@ -97,7 +97,8 @@
                 inputMax: 200000,
                 inputStep: 1,
                 inputValue: 50,
-            
+                minAmount: "1000 грн",
+                maxAmount: "200 000 грн",
                 label: "Сума кредиту"
             },
             {
