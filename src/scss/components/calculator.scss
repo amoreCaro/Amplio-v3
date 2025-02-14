@@ -38,7 +38,12 @@
     max-width: 400px;
     width: 100%;
     margin-bottom: 82px;
-
+    &-img {
+      max-width: 60px;
+      & img {
+        width: 100%;
+      }
+    }
     &-top {
       display: flex;
       margin-bottom: 30px;
@@ -59,8 +64,6 @@
           color: $black;
         }
       }
-    }
-    &-img {
     }
     &-btn {
       margin-bottom: 20px;
@@ -115,7 +118,6 @@
     }
     & input {
       width: 100%;
-      // margin-bottom: 16px;
       height: 50px;
       border-radius: 16px;
       padding: 16px 20px;
@@ -128,18 +130,18 @@
     & input[type="range"] {
       width: 100%;
       height: 4px;
-      background: none; /* Додаємо колір для треку */
+      background: none;
       border: none;
       -webkit-appearance: none;
       appearance: none;
       outline: none;
-      border-radius: 5px; /* Краще закруглення для треку */
+      border-radius: 5px;
     }
 
     & input[type="range"]::-webkit-slider-runnable-track {
-      height: 4px; /* Висота треку */
-      background: #ddd; /* Колір треку */
-      border-radius: 5px; /* Заокруглені краї */
+      height: 4px;
+      background: #ddd;
+      border-radius: 5px;
     }
 
     & input[type="range"]::-webkit-slider-thumb {
@@ -147,13 +149,15 @@
       appearance: none;
       width: 16px;
       height: 16px;
-      background: $blue; /* Ваш колір для повзунка */
+      background: $blue;
       border-radius: 50%;
       cursor: pointer;
-      border: none; /* Відсутність бордера на повзунку */
+      border: none;
     }
   }
   &__buttons {
+    display: flex;
+    gap: 10px;
     margin-top: -18px;
   }
   &__amount-display {
@@ -162,6 +166,99 @@
     & p {
       font-size: 16px;
       line-height: 16px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .calculator {
+    &__container {
+      padding: 45px 22px;
+      max-width: 984px;
+      border-radius: 32px;
+    }
+
+    &__content {
+      padding: 5px 0px;
+      &-inner {
+        border-radius: 24px;
+        background-color: $white;
+        display: flex;
+        padding: 30px;
+      }
+      .calculator__title {
+        margin-bottom: 30px;
+        & h2 {
+          width: 100%;
+          font-size: 28px !important;
+          line-height: 32px !important;
+        }
+      }
+      .calculator__input-group {
+        margin-bottom: 30px;
+        max-width: 376px;
+        & label {
+          margin-bottom: 10px;
+          font-size: 14px;
+          line-height: 14px;
+        }
+        & input {
+          width: 100%;
+          height: 40px;
+          border-radius: 12px;
+          padding: 13px 16px;
+        }
+
+        & input[type="range"]::-webkit-slider-runnable-track {
+          height: 3px;
+          background: #ddd;
+          border-radius: 5px;
+        }
+      }
+    }
+    &__amount-display {
+      margin-top: -4px;
+      & p {
+        font-size: 14px;
+        line-height: 14px;
+      }
+    }
+    &__buttons {
+      margin-top: -13px;
+    }
+    &__cta {
+      margin-bottom: 34px;
+      &-btn {
+        margin-right: 34px;
+        margin-top: 36px;
+      }
+      &-img {
+        max-width: 48px;
+      }
+      &-top-text {
+        & p {
+          margin-bottom: 4px;
+        }
+        & span {
+          font-size: 28px;
+          line-height: 28px;
+        }
+      }
+    }
+    &__info {
+      &-item:not(:last-child) {
+        margin-bottom: 16px;
+      }
+      &-text {
+        & p {
+          font-size: 12px;
+          line-height: 12px;
+        }
+        & span {
+          font-size: 16px;
+          line-height: 16px;
+        }
+      }
     }
   }
 }

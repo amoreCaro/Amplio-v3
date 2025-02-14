@@ -96,10 +96,23 @@
 @media screen and (max-width: 1024px) {
   .btn-primary {
     height: 60px;
-    max-width: 240px;
+    min-width: 256px;
     font-size: 16px;
     line-height: 16px;
     border-radius: 12px;
+  }
+  .btn-large {
+    height: 60px;
+    min-width: 256px;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 22px 46px;
+    & img {
+      margin-left: 10px;
+    }
+  }
+  .btn-calculator-tabs {
+    height: 30px;
   }
 }
 

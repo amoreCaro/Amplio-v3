@@ -124,16 +124,16 @@ img {
 }
 
 h1 {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 48px;
   line-height: 52px;
   color: $black;
 }
 
 h2 {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 40px;
-  line-height: 43px;
+  line-height: 40px;
   color: $black;
 }
 
@@ -164,23 +164,19 @@ a {
   text-decoration: none;
 }
 
-// @media screen and (max-width: 425px) {
-//   .section {
-//     margin: 75px 0;
-//     width: 100%;
-//   }
-// }
-// @media screen and (max-width: 1024px) {
-//   h1 {
-//     font-size: 36px;
-//   }
-//   h2 {
-//     font-size: 38px;
-//   }
-//   h3 {
-//     font-size: 30px;
-//   }
-// }
+
+@media screen and (max-width: 1024px) {
+  // h1 {
+  //   font-size: 36px;
+  // }
+  h2 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  // h3 {
+  //   font-size: 30px;
+  // }
+}
 // @media screen and (max-width: 768px) {
 //   h2 {
 //     font-size: 36px;
