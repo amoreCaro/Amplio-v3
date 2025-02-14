@@ -1,0 +1,50 @@
+.h-text {
+    // & p {
+    //   font-weight: 400;
+    //   font-size: 16px;
+    //   line-height: 24px;
+    //   color: $text-color;
+    //   margin-bottom: 32px;
+  
+    //   & b {
+    //     font-weight: 700;
+    //     color: $accent-color;
+    //   }
+  
+    //   & a {
+    //     font-weight: 400;
+    //     font-size: 16px;
+    //     line-height: 24px;
+    //     color: $text-color;
+    //     text-decoration: underline;
+    //     &:hover {
+    //       text-decoration: none;
+    //     }
+    //   }
+    // }
+  
+    & ul {
+      color: $text-color;
+      margin-left: 20px;
+  
+      &.colored-bullet li {
+        margin-bottom: 32px;
+  
+        &::marker {
+          color: $blue;
+          font-size: 21px;
+          margin-right: 12px;
+          margin-left: 4px;
+        }
+      }
+    }
+  
+    // & blockquote {
+    //   color: $accent-color;
+    //   font-weight: 400;
+    //   font-style: italic;
+    //   font-size: 24px;
+    //   line-height: 42px;
+    // }
+  }
+  

@@ -3,8 +3,10 @@
     max-width: 1220px;
     display: flex;
   }
+  
   &__title {
     margin-bottom: 60px;
+    
     & h2 {
       font-weight: 400;
       font-size: 56px;
@@ -23,30 +25,26 @@
   &__list {
     display: none;
   }
+
   &__item {
-    margin-bottom: 60px;
-    &-image {
-      max-width: 353px;
-      margin-bottom: 24px;
-      & img {
-        width: 100%;
-      }
-    }
-    &-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & p {
+      font-size: 16px;
+      line-height: 19.2px;
+      font-weight: 400;
+
+
       & span {
-        color: $text-color;
+        font-size: 28px;
+        line-height: 33.6px;
       }
-      & h3 {
-        margin: 16px 0px;
-      }
-    }
-    &-btn {
-      display: flex;
-      align-items: center;
     }
   }
 }
 
-.tabs__list .active {
+.tabs__list.active {
   display: block;
 }

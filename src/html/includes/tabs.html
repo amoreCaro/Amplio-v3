@@ -1,41 +1,43 @@
 <section class="tabs section h-center <%= additionalClass %>">
-    <div class="tabs__container">
-        <div class="tabs__left">
-            <div class="tabs__title">
-                <h2><%= title %></h2>
-            </div>
+  <div class="tabs__container h-text">
+    <div class="tabs__left">
+      <div class="tabs__title">
+        <h2><%= title %></h2>
+      </div>
 
-            <div class="tabs__buttons">
-                <% buttons.forEach(function(button) { %>
-                <button
-                  class="btn <%= button.class %>"
-                  data-tab-target="<%= button.tabTarget %>"
-                >
-                  <%= button.text %>
-                </button>
-                <% }); %>
-              </div>
+      <div class="tabs__buttons">
+        <% buttons.forEach(function(button) { %>
+        <button
+          class="btn <%= button.class %>"
+          data-tab-target="<%= button.tabTarget %>"
+        >
+          <%= button.text %>
+        </button>
+        <% }); %>
+      </div>
 
-            <% groupItems.forEach(function(groupItem) { %>
-                <div class="tabs__list" id="<%= groupItem.id %>">
-                  <% groupItem.items.forEach(function(item) { %>
-                    <div class="tabs__item">
-                      <div class="tabs__item-text">
-                        <ul><%= item.text %></ul>
-                        <span><%= item.title %></span>
-                      </div>
-                    </div>
-                  <% }); %>
-                </div>
-            <% }); %>
+      <% groupItems.forEach(function(groupItem) { %>
+      <div class="tabs__list" id="<%= groupItem.id %>">
+        <% groupItem.items.forEach(function(item) { %>
+        <div class="tabs__item">
+          <!-- Виведення <li> з класом colored-bullet для кожного елементу -->
+          <ul class="colored-bullet">
+            <li ><%= item.title %></li>
+          </ul>
 
+          <!-- Виведення тексту в <p> -->
+          <p><%= item.text %></p>
         </div>
+        <% }); %>
+      </div>
 
-        <div class="tabs__right">
-            <div class="tabs__decor">
-                <img src="<%= decor %>" alt="Tabs Decoration" />
-            </div>
-        </div>
+      <% }); %>
     </div>
-</section>
 
+    <div class="tabs__right">
+      <div class="tabs__decor">
+        <img src="<%= decor %>" alt="Tabs Decoration" />
+      </div>
+    </div>
+  </div>
+</section>

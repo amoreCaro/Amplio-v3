@@ -60,8 +60,24 @@
                 id: "tabs-all", 
                 items: [
                    {
-                    text:"vfdvdv",
-                    title: "vfdfvd"
+                    title: "Номінальна ставка",
+                    text:"<span>0,01%</span> річних"
+                   }, 
+                   {
+                    title: "Термін",
+                    text:"до <span>36 міс.</span>"
+                   },
+                   {
+                    title: "Сума",
+                    text:"<span>до 200 тис.</span> грн."
+                   }, 
+                   {
+                    title: "Одноразова комісія",
+                    text:"<span>6,9%</span>"
+                   },
+                   {
+                    title: "Щомісячна комісія",
+                    text:"<span>6,9%</span>"
                    }
                 ]
             },
@@ -69,8 +85,8 @@
                 id: "tabs-news", 
                 items: [
                    {
-                    text:"aaaaa",
-                    title: "vfdfvd"
+                    title: "vfdfvd",
+                    text:"aaaaa"
                    }
                 ]
             },
@@ -78,8 +94,8 @@
                 id: "tabs-events", 
                 items: [
                    {
-                    text:"bbbbbb",
-                    title: "vfdfvd"
+                    title: "vfdfvd",
+                    text:"bbbbbb"
                    }
                 ]
             }
@@ -244,3 +260,4 @@
 
 </main>
 
+<%=_.template(require('./../includes/footer.html').default)(data) %>
