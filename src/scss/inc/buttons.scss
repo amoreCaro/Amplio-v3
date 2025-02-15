@@ -114,6 +114,21 @@
   .btn-calculator-tabs {
     height: 30px;
   }
+  .btn-tabs {
+    font-size: 14px;
+    line-height: 16.8px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+    }
+    &.active {
+      &::after {
+        bottom: -10px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
