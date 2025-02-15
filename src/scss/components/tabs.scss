@@ -141,3 +141,67 @@
     }
   }
 }
+@media (max-width: 768px) {
+  .tabs {
+    &__container {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      max-width: 680px;
+      flex-direction: column;
+    }
+    &__title {
+      margin-bottom: 40px;
+
+      & h2 {
+        font-size: 32px;
+        line-height: 32px;
+      }
+    }
+    &__left {
+      max-width: 680px;
+      width: 100%;
+      margin-right: 0px;
+    }
+
+    &__buttons {
+      display: flex;
+      margin-bottom: 48px;
+    }
+    &__item {
+      height: 34px;
+      & li {
+        font-size: 14px;
+        line-height: 16.8px;
+      }
+      & p {
+        font-size: 20px;
+        line-height: 24px;
+        max-width: 200px;
+
+        & span {
+          font-size: 24px;
+          line-height: 29px;
+        }
+      }
+    }
+    &__btn {
+      max-width: 240px !important;
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    &__decor {
+      max-width: 680px;
+      width: 680px;
+      height: 633px;
+      max-block-size: fit-content;
+      margin-top: 0;
+      & img {
+        width: 100%;
+        height: 100%;
+        border-radius: 48px;
+      }
+    }
+  }
+}
