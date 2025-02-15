@@ -17,7 +17,7 @@
       position: absolute;
       bottom: -15px;
       left: 0;
-      width: calc(100% + 40px);
+      width: 100%;
       height: 1px;
       background-color: #bcbcbc;
     }
@@ -28,7 +28,7 @@
         position: absolute;
         bottom: -15px;
         left: 0;
-        width: calc(100% + 40px);
+        width: 100%;
         height: 1px;
         background-color: $blue;
       }
@@ -43,11 +43,11 @@
     border-radius: 4px;
     &.active {
       color: $blue;
-      background: #2046D21A;
+      background: #2046d21a;
     }
     &:hover {
       color: $blue;
-      background: #2046D21A;
+      background: #2046d21a;
       transition: $transition;
     }
   }
@@ -145,7 +145,6 @@
     line-height: 14px;
   }
   .btn-large {
-
     min-width: 280px;
     height: 60px;
     font-weight: 400;
