@@ -7,30 +7,30 @@
 
         <div class="advantages__list">
             <% advantagesList.forEach(function(item) { %>
-            <div class="advantages__list-item">
+            <div class="advantages__item">
                 
                 <!-- Text Block -->
-                <div class="advantages__list-item-text">
+                <div class="advantages__item-text">
                     <p><%= item.text %></p>
                 </div>
 
                 <!-- Wrapper for center and bottom content -->
-                <div class="advantages__list-item-content-wrapper">
+                <div class="advantages__item-content-wrapper">
                     <!-- Center content -->
-                    <div class="advantages__list-item-center">
-                        <div class="advantages__list-item-center-text">
+                    <div class="advantages__item-center">
+                        <div class="advantages__item-center-text">
                             <p><%= item.centerText %></p>
                         </div>
-                        <div class="advantages__list-item-center-image">
-                            <img src="<%= item.imageSrc %>" alt="<%= item.imageAlt %>" class="advantages__list-item-image">
+                        <div class="advantages__item-center-image">
+                            <img src="<%= item.imageSrc %>" alt="<%= item.imageAlt %>" class="advantages__item-image">
                         </div>
                     </div>
 
                     <!-- Bottom content -->
-                    <div class="advantages__list-item-bottom">
+                    <div class="advantages__item-bottom">
                         <% if (item.bottomImageSrc) { %>
-                            <div class="advantages__list-item-bottom-image">
-                                <img src="<%= item.bottomImageSrc %>" alt="<%= item.bottomImageAlt %>" class="advantages__list-item-bottom-image">
+                            <div class="advantages__item-bottom-image">
+                                <img src="<%= item.bottomImageSrc %>" alt="<%= item.bottomImageAlt %>" class="advantages__item-bottom-image">
                             </div>
                         <% } %>
                         <p><%= item.bottomText %></p>
