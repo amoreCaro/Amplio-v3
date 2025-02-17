@@ -93,7 +93,7 @@
     calculator: {
         fields: [
             {
-                inputId: "calculatorInput1", 
+                inputId: "inputCreditSum", 
                 inputMin: 1000,
                 inputMax: 200000,
                 inputStep: 1,
@@ -103,7 +103,7 @@
                 label: "Сума кредиту"
             },
             {
-                inputId: "calculatorInput1", 
+                inputId: "inputTerm", 
                 inputMin: 1,
                 inputMax: 24,
                 inputStep: 1,
