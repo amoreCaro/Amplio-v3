@@ -134,17 +134,17 @@
             { 
                 text: "6 місяців", 
                 class: "btn-calculator-tabs openTab active",
-                tabTarget: "tabs-all"
+                tabTarget: "calculatorTabTarget"
             },
             { 
                 text: "12 місяців", 
                 class: "btn-calculator-tabs openTab",
-                tabTarget: "tabs-news"  
+                tabTarget: "calculatorTabTarget"  
             },
             { 
                 text: "24 місяці", 
                 class: "btn-calculator-tabs openTab",
-                tabTarget: "tabs-events" 
+                tabTarget: "calculatorTabTarget" 
             },
         ],
     btn: {
