@@ -6,13 +6,13 @@
                     <div class="calculator__title">
                         <h2><%= title %></h2>
                     </div>
-
                     <% calculator.fields.forEach(function(field) { %>
                         <div class="calculator__input-group">
                             <label for="<%= field.inputId %>" class="calculator__label">
                                 <%= field.label %>
                             </label>
-
+                    
+                            <!-- Поле вводу (text) -->
                             <input
                                 type="text"
                                 id="<%= field.inputId %>"
@@ -21,9 +21,9 @@
                                 step="<%= field.inputStep %>"
                                 value="<%= field.inputValue %>"
                                 class="calculator__input-number"
-                                oninput="updateAmount()"
                             />
-
+                    
+                            <!-- Слайдер -->
                             <input
                                 type="range"
                                 id="<%= field.inputId %>_range"
@@ -32,15 +32,15 @@
                                 step="<%= field.inputStep %>"
                                 value="<%= field.inputValue %>"
                                 class="calculator__slider slider"
-                                oninput="updateAmount()"
                             />
-
+                    
                             <div id="amountDisplay" class="calculator__amount-display">
                                 <p><%= field.minAmount %></p>
                                 <p><%= field.maxAmount %></p>
                             </div>
                         </div>
                     <% }); %>
+                    
                     <div class="calculator__buttons">
                         <% buttons.forEach(function(button) { %>
                         <button
@@ -50,7 +50,7 @@
                           <%= button.text %>
                         </button>
                         <% }); %>
-                      </div>
+                    </div>
                 </div>
                 <div class="calculator__right">
                     <div class="calculator__cta">

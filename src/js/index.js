@@ -4,9 +4,11 @@
 // import megaMenu from './components/megaMenu';
 // import modal from './components/modal';
 import tabsLogic from './components/tabsLogic';
+import calculator from './components/calculator';
 
 $( document ).ready(function() {
     tabsLogic();
+    calculator();
     // news();
     // sidebarLogic();
     // megaMenu();
