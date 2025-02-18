@@ -67,7 +67,7 @@
             ],
             btn: {
                 class: "btn-large",
-                text: "Отримати кредит",
+                text: "Розрахувати кредит",
                 imgSrc: "img/calculator.png",
                 link: "/apply" 
             }

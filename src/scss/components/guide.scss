@@ -78,6 +78,7 @@
 
 @media screen and (max-width: 1024px) {
   .guide {
+    padding-bottom: 72px;
     &__container {
       max-width: 942px;
     }
@@ -87,17 +88,20 @@
     }
     &__list {
       display: flex;
-      //   margin-top: 90px;
+      margin-top: 90px;
       &-item {
         margin-right: 25px;
         top: -26px;
         width: 210px;
+        &-text {
+          height: 170px;
+        }
         & span {
           font-size: 64px;
           line-height: 64px;
         }
         & p {
-          margin-top: 30px;
+          margin-top: 38px;
           font-size: 16px;
           line-height: 19px;
         }
@@ -108,7 +112,10 @@
       }
     }
     &__left {
+      max-width: 240px;
+      width: 100%;
       top: -36px;
+      gap: 0px;
       & p {
         font-size: 12px;
         line-height: 14.4px;

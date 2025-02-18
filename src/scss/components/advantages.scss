@@ -126,26 +126,29 @@
 
 @media (max-width: 1024px) {
   .advantages {
+    padding-bottom: 110px;
     &__container {
       max-width: 969px;
       width: 100%;
     }
     &__title {
-      max-width: 290px;
-      margin-bottom: 16px;
+      max-width: 291px;
+      margin-bottom: 30px;
       & h2 {
         font-size: 30px;
         line-height: 32px;
         margin-bottom: 20px;
       }
       & p {
-        max-width: 228px;
+        max-width: 244px;
         font-size: 12px;
         line-height: 14.46px;
         color: $black;
       }
     }
     &__list {
+      max-width: 940px;
+      width: 100%;
       gap: 20px;
     }
     &__item {

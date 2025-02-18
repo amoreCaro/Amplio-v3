@@ -112,6 +112,7 @@
       }
     }
     &__left {
+      margin-left: 8px;
       max-width: 460px;
       width: 100%;
       margin-right: 100px;
@@ -144,6 +145,7 @@
       margin-top: 30px;
     }
     &__decor {
+      margin-top: 0px;
       max-width: 402px;
       max-height: 430px;
       & img {
