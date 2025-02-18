@@ -1,5 +1,6 @@
 //add class container to center elements
 .advantages {
+  padding: 0px 0px 160px 0px;
   &__container {
     max-width: 1160px;
     width: 100%;
@@ -12,11 +13,13 @@
       line-height: 56px;
       color: $black;
       margin-bottom: 20px;
+      font-weight: 400;
     }
     & p {
-      max-width: 311px;
+      max-width: 325px;
       font-size: 16px;
       line-height: 19px;
+      font-weight: 300;
       color: $black;
     }
   }
@@ -29,7 +32,7 @@
     width: 100%;
     height: 400px;
     border-radius: 32px;
-    padding: 36px 40px;
+    padding: 36px 30px 36px 40px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;

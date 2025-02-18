@@ -1,4 +1,5 @@
 .calculator {
+  padding-bottom: 160px;
   &__container {
     border-radius: 48px;
     padding: 65px 60px 60px 60px;
@@ -45,7 +46,7 @@
 
     &-top {
       display: flex;
-      margin-bottom: 30px;
+      margin-bottom: 24px;
 
       &-text {
         margin-left: 30px;
