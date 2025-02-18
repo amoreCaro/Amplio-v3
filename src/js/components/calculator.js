@@ -10,12 +10,24 @@ export default function calculator() {
         });
     }
 
+    // Функція для вибору правильного закінчення слова "місяць"
+    function getMonthSuffix(months) {
+        // Використовуємо правила для вибору суфікса
+        if (months === 24) {
+            return 'місяці'; // Для 1 місяця
+        } else {
+            return 'місяців'; // Для 2-4 місяців
+        }
+    }
+
     // Оновлення значення input з додаванням одиниць вимірювання
     function updateInputValue(fieldId, value) {
         if (fieldId === "inputCreditSum") {
             $('#' + fieldId).val(value + ' грн.'); // Для inputCreditSum додаємо "грн."
         } else if (fieldId === "inputTerm") {
-            $('#' + fieldId).val(value + ' місяців'); // Для inputTerm додаємо "місяців"
+            var months = parseInt(value);
+            var suffix = getMonthSuffix(months);  // Отримуємо правильне закінчення для місяців
+            $('#' + fieldId).val(value + ' ' + suffix); // Оновлюємо значення input з правильним суфіксом
         } else {
             $('#' + fieldId).val(value); // Для інших input просто виводимо число
         }

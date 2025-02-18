@@ -104,12 +104,12 @@
             },
             {
                 inputId: "inputTerm", 
-                inputMin: 1,
+                inputMin: 6,
                 inputMax: 24,
                 inputStep: 1,
                 inputValue: 6,
                 minAmount: "6 місяців",
-                maxAmount: "24 місяців",
+                maxAmount: "24 місяці",
                 label: "Термін"
             }
         ],
