@@ -71,34 +71,28 @@ export default function calculator() {
     // Обробка кліку на кнопки табів
     function handleTabClick() {
         $(".btn-calculator-tabs").on("click", function () {
-            const tabsId = $(this).data("calculatorTabTarget");
-            const buttonText = $(this).text();
+            const buttonText = $(this).text().trim(); // Отримуємо текст кнопки
             const currentValue = $("#inputTerm").val(); // Поточне значення в input
-
+    
             // Якщо значення на кнопці відрізняється від поточного значення в inputTerm
             if (buttonText !== currentValue) {
                 // Якщо значення не співпадає, забираємо клас active з попереднього елемента
                 $(".btn-calculator-tabs.active").removeClass("active");
-                $("#" + tabsId + ".active").removeClass("active");
+                $(this).addClass("active").siblings().removeClass("active");
             }
-
-            // Додаємо клас active до натиснутої кнопки і відповідного контенту
-            $(this).addClass("active").siblings().removeClass("active");
-            $("#" + tabsId).addClass("active").siblings().removeClass("active");
-
+    
             // Оновлюємо значення в input
             $("#inputTerm").val(buttonText);
-
+    
             // Оновлюємо слайдер в залежності від значення тексту кнопки
-            var slider = $("#" + tabsId + "_range"); // Отримуємо відповідний слайдер по ID
             var value = parseInt(buttonText); // Конвертуємо текст кнопки в число (наприклад "6 місяців" -> 6)
-
+    
             if (!isNaN(value)) {
-                // Перевіряємо діапазон слайдера, щоб не перевищувати межі
-                var minValue = slider.attr("min");
-                var maxValue = slider.attr("max");
-
-                // Встановлюємо значення слайдера, якщо воно в межах діапазону
+                var slider = $("#inputTerm_range"); // Відповідний слайдер за id "inputTerm_range"
+                var minValue = parseInt(slider.attr("min"));
+                var maxValue = parseInt(slider.attr("max"));
+    
+                // Перевірка, чи значення в межах діапазону слайдера
                 if (value >= minValue && value <= maxValue) {
                     slider.val(value); // Встановлюємо значення слайдера
                 } else {
@@ -107,7 +101,7 @@ export default function calculator() {
             }
         });
     }
-
+    
 
     // Викликаємо функції
     initializeInputs();
