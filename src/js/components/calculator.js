@@ -62,6 +62,7 @@ export default function calculator() {
     }
 
     // Налаштовуємо активний таб за замовчуванням
+
     function setActiveTab() {
         $(".btn-calculator-tabs").first().addClass("active");
         $(".tabs__list").first().addClass("active");
@@ -71,14 +72,22 @@ export default function calculator() {
     function handleTabClick() {
         $(".btn-calculator-tabs").on("click", function () {
             const tabsId = $(this).data("calculatorTabTarget");
+            const buttonText = $(this).text();
+            const currentValue = $("#inputTerm").val(); // Поточне значення в input
+
+            // Якщо значення на кнопці відрізняється від поточного значення в inputTerm
+            if (buttonText !== currentValue) {
+                // Якщо значення не співпадає, забираємо клас active з попереднього елемента
+                $(".btn-calculator-tabs.active").removeClass("active");
+                $("#" + tabsId + ".active").removeClass("active");
+            }
 
             // Додаємо клас active до натиснутої кнопки і відповідного контенту
             $(this).addClass("active").siblings().removeClass("active");
             $("#" + tabsId).addClass("active").siblings().removeClass("active");
 
-            // Отримуємо текст кнопки і оновлюємо значення input з id inputTerm
-            var buttonText = $(this).text();
-            $("#inputTerm").val(buttonText); // Оновлюємо значення в input
+            // Оновлюємо значення в input
+            $("#inputTerm").val(buttonText);
 
             // Оновлюємо слайдер в залежності від значення тексту кнопки
             var slider = $("#" + tabsId + "_range"); // Отримуємо відповідний слайдер по ID
@@ -98,6 +107,7 @@ export default function calculator() {
             }
         });
     }
+
 
     // Викликаємо функції
     initializeInputs();
