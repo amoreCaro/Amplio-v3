@@ -68,13 +68,13 @@ export default function calculator() {
         var sliderValue = $("#inputTerm_range").val(); // Отримуємо значення слайдера
         var buttons = $(".btn-calculator-tabs");
         var foundMatch = false; // Флаг для перевірки, чи є збіг
-    
+
         // Проходимо по всіх кнопках
         buttons.each(function () {
             var buttonText = $(this).text().trim(); // Текст кнопки
             // Витягуємо лише число з тексту кнопки, щоб порівнювати з числовим значенням слайдера
             var buttonValue = buttonText.replace(/[^\d]/g, ''); // Видаляємо все, що не є цифрою
-    
+
             // Якщо значення слайдера співпадає з числовим значенням на кнопці
             if (buttonValue === sliderValue) {
                 $(this).addClass("active"); // Додаємо клас active
@@ -83,7 +83,7 @@ export default function calculator() {
                 $(this).removeClass("active"); // Видаляємо клас active
             }
         });
-    
+
         // Якщо немає збігів, забираємо клас active у всіх кнопок
         if (!foundMatch) {
             buttons.removeClass("active");
@@ -101,25 +101,25 @@ export default function calculator() {
         $(".btn-calculator-tabs").on("click", function () {
             const buttonText = $(this).text().trim(); // Отримуємо текст кнопки
             const currentValue = $("#inputTerm").val(); // Поточне значення в input
-    
+
             // Якщо значення на кнопці відрізняється від поточного значення в inputTerm
             if (buttonText !== currentValue) {
                 // Якщо значення не співпадає, забираємо клас active з попереднього елемента
                 $(".btn-calculator-tabs.active").removeClass("active");
                 $(this).addClass("active").siblings().removeClass("active");
             }
-    
+
             // Оновлюємо значення в input
             $("#inputTerm").val(buttonText);
-    
+
             // Оновлюємо слайдер в залежності від значення тексту кнопки
             var value = parseInt(buttonText); // Конвертуємо текст кнопки в число (наприклад "6 місяців" -> 6)
-    
+
             if (!isNaN(value)) {
                 var slider = $("#inputTerm_range"); // Відповідний слайдер за id "inputTerm_range"
                 var minValue = parseInt(slider.attr("min"));
                 var maxValue = parseInt(slider.attr("max"));
-    
+
                 // Перевірка, чи значення в межах діапазону слайдера
                 if (value >= minValue && value <= maxValue) {
                     slider.val(value); // Встановлюємо значення слайдера
@@ -129,11 +129,23 @@ export default function calculator() {
             }
         });
     }
-    
+    function calculateMounthPayment() {
+        // Get the values from the inputs
+        var creditSum = parseFloat(document.getElementById('inputCreditSum').value);
+        var term = parseInt(document.getElementById('inputTerm').value);
+
+
+        console.log("inputCreditSum: " + creditSum);
+        console.log("term: " + term);
+    }
+
+
+
     // Викликаємо функції
     initializeInputs();
     handleInput();
     handleSlider();
     setActiveTab();
     handleTabClick();
+    calculateMounthPayment();
 }

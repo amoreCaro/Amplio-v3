@@ -16,6 +16,8 @@
         <% }); %>
       </div>
 
+
+
       <% groupItems.forEach(function(groupItem) { %>
         <div class="tabs__list" id="<%= groupItem.id %>">
           <% groupItem.items.forEach(function(item) { %>
@@ -27,18 +29,19 @@
               <p><%= item.text %></p>
             </div>
           <% }); %>
-
-          <!-- Render Call to Action Button -->
-          <% if (groupItem.btn) { %>
-            <div class="tabs__btn">
-              <a href="<%= groupItem.btn.link %>" class="btn <%= groupItem.btn.class %>">
-                <img src="<%= groupItem.btn.imgSrc %>" alt="Button Image" />
-                <%= groupItem.btn.text %>
-              </a>
-            </div>
-          <% } %>
         </div>
       <% }); %>
+            <!-- Move the button section here -->
+            <% groupItems.forEach(function(groupItem) { %>
+              <% if (groupItem.btn) { %>
+                <div class="tabs__btn">
+                  <a href="<%= groupItem.btn.link %>" class="btn <%= groupItem.btn.class %>">
+                    <img src="<%= groupItem.btn.imgSrc %>" alt="Button Image" />
+                    <%= groupItem.btn.text %>
+                  </a>
+                </div>
+              <% } %>
+            <% }); %>
     </div>
 
     <div class="tabs__right">
@@ -48,4 +51,3 @@
     </div>
   </div>
 </section>
-
