@@ -4,7 +4,7 @@ export default function calculator() {
         $('.calculator__input-number').each(function () {
             var fieldId = $(this).attr('id'); // Отримуємо ID для input
             var value = $(this).val();
-            // Додаємо текст за замовчуванням після значення
+            // Оновлюємо значення input з текстом
             updateInputValue(fieldId, value); // Оновлюємо input з текстом
             $('#' + fieldId + '_range').val(value); // Синхронізуємо слайдер
         });
@@ -89,7 +89,6 @@ export default function calculator() {
             buttons.removeClass("active");
         }
     }
-    
 
     // Налаштовуємо активний таб за замовчуванням
     function setActiveTab() {
@@ -131,7 +130,6 @@ export default function calculator() {
         });
     }
     
-
     // Викликаємо функції
     initializeInputs();
     handleInput();

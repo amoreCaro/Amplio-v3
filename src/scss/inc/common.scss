@@ -7,7 +7,8 @@ html,
 body {
   max-width: 100%;
   overflow-x: hidden;
-  font-family: "Urbanist", sans-serif;
+  font-family: 'Geologica', sans-serif;
+  font-weight: 400;
 }
 
 * {
@@ -84,7 +85,8 @@ img {
 .section {
   width: 100%;
 
-  &:first-of-type {  /* Use :first-of-type instead of :first-child */
+  &:first-of-type {
+    /* Use :first-of-type instead of :first-child */
     margin-top: 0px !important;
   }
 
@@ -101,7 +103,6 @@ img {
   margin-top: 50px !important;
   margin-bottom: 150px !important;
 }
-
 
 @media (max-width: 425px) {
   .section:first-child {
@@ -161,7 +162,6 @@ a {
   line-height: 24px;
   text-decoration: none;
 }
-
 
 @media screen and (max-width: 1024px) {
   // h1 {
