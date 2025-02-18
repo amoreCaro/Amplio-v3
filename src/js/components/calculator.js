@@ -68,25 +68,28 @@ export default function calculator() {
         var sliderValue = $("#inputTerm_range").val(); // Отримуємо значення слайдера
         var buttons = $(".btn-calculator-tabs");
         var foundMatch = false; // Флаг для перевірки, чи є збіг
-
+    
         // Проходимо по всіх кнопках
         buttons.each(function () {
             var buttonText = $(this).text().trim(); // Текст кнопки
-
-            // Якщо значення слайдера співпадає з текстом кнопки
-            if (buttonText === sliderValue) {
+            // Витягуємо лише число з тексту кнопки, щоб порівнювати з числовим значенням слайдера
+            var buttonValue = buttonText.replace(/[^\d]/g, ''); // Видаляємо все, що не є цифрою
+    
+            // Якщо значення слайдера співпадає з числовим значенням на кнопці
+            if (buttonValue === sliderValue) {
                 $(this).addClass("active"); // Додаємо клас active
                 foundMatch = true; // Є збіг
             } else {
                 $(this).removeClass("active"); // Видаляємо клас active
             }
         });
-
+    
         // Якщо немає збігів, забираємо клас active у всіх кнопок
         if (!foundMatch) {
             buttons.removeClass("active");
         }
     }
+    
 
     // Налаштовуємо активний таб за замовчуванням
     function setActiveTab() {
