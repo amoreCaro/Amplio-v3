@@ -44,6 +44,7 @@ export default function calculator() {
 
             // Оновлюємо значення input в залежності від поля
             updateInputValue(fieldId, value);
+            updateActiveButtonState(); // Перевірка стану кнопок при зміні input
         });
     }
 
@@ -58,11 +59,36 @@ export default function calculator() {
 
             // Синхронізуємо значення слайдера
             $('#' + fieldId + '_range').val(value);
+            updateActiveButtonState(); // Перевірка стану кнопок при зміні слайдера
         });
     }
 
-    // Налаштовуємо активний таб за замовчуванням
+    // Функція для оновлення стану кнопок
+    function updateActiveButtonState() {
+        var sliderValue = $("#inputTerm_range").val(); // Отримуємо значення слайдера
+        var buttons = $(".btn-calculator-tabs");
+        var foundMatch = false; // Флаг для перевірки, чи є збіг
 
+        // Проходимо по всіх кнопках
+        buttons.each(function () {
+            var buttonText = $(this).text().trim(); // Текст кнопки
+
+            // Якщо значення слайдера співпадає з текстом кнопки
+            if (buttonText === sliderValue) {
+                $(this).addClass("active"); // Додаємо клас active
+                foundMatch = true; // Є збіг
+            } else {
+                $(this).removeClass("active"); // Видаляємо клас active
+            }
+        });
+
+        // Якщо немає збігів, забираємо клас active у всіх кнопок
+        if (!foundMatch) {
+            buttons.removeClass("active");
+        }
+    }
+
+    // Налаштовуємо активний таб за замовчуванням
     function setActiveTab() {
         $(".btn-calculator-tabs").first().addClass("active");
         $(".tabs__list").first().addClass("active");
