@@ -172,12 +172,14 @@
 }
 
 @media screen and (max-width: 375px) {
-  .credit {
+  .credit {  
+    padding-bottom: 54px;
+
     &__container {
       max-width: 325px;
     }
     &__title {
-      max-width: 257px;
+      max-width: 275px;
 
       & h2 {
         font-size: 28px;
@@ -196,6 +198,8 @@
         width: 100%;
         &-text {
           max-width: 284px;
+          margin-bottom: 18px;
+
           & h3 {
             max-width: 192px;
           }
