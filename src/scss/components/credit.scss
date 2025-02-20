@@ -139,11 +139,13 @@
       justify-content: center;
       align-items: center;
       &-item {
+        min-height: 357px;
         padding: 30px 40px;
         border-radius: 32px;
         max-width: 320px;
         width: 100%;
         &-text {
+          height: 200px;
           max-width: 192px;
           & h3 {
             font-size: 24px;
@@ -172,7 +174,7 @@
 }
 
 @media screen and (max-width: 375px) {
-  .credit {  
+  .credit {
     padding-bottom: 54px;
 
     &__container {
