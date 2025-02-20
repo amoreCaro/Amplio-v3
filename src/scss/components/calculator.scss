@@ -146,6 +146,7 @@
   &__amount-display {
     display: flex;
     justify-content: space-between;
+    color: #929292;
     & p {
       font-size: 16px;
       line-height: 16px;
@@ -426,7 +427,6 @@
     }
   }
 }
-
 @media (max-width: 375px) {
   .calculator {
     padding-bottom: 64px;

@@ -165,7 +165,11 @@
     }
   }
 }
-
+@media (max-width: 425px) {
+  .btn-calculator-tabs {
+    height: 44px;
+  }
+}
 @media screen and (max-width: 375px) {
   .btn-primary {
     min-width: 320px;
@@ -173,6 +177,7 @@
     height: 60px;
   }
   .btn-calculator-tabs {
+    height: 30px;
     font-size: 14px;
     line-height: 14px;
   }

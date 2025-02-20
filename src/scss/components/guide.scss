@@ -130,6 +130,7 @@
 }
 @media screen and (max-width: 768px) {
   .guide {
+    padding-bottom: 120px;
     &__container {
       max-width: 680px;
       text-align: center;
@@ -151,8 +152,10 @@
       &-item {
         margin-right: 80px;
         top: -26px;
-        width: 210px;
+        max-width: 210px;
         text-align: left;
+        width: 100%;
+        height: 320px;
 
         & span {
           font-size: 96px;
@@ -174,15 +177,17 @@
     }
 
     &__left {
-      margin-top: 80px;
       display: flex;
       text-align: center;
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      margin-top: 80px;
+      max-width: 100%;
       & p {
         font-size: 12px;
         line-height: 14.4px;
+        text-align: left;
       }
     }
 
@@ -226,7 +231,7 @@
         max-width: 250px;
         width: 100%;
         text-align: left;
-        margin-bottom: -68px;
+        margin-bottom: -217px;
         &-text {
           display: flex;
           justify-content: center;
@@ -250,7 +255,8 @@
           left: 0px;
           width: 32px;
           height: 65px;
-          top: 65%;
+          top: 34%;
+
         }
       }
     }
