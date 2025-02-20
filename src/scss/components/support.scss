@@ -17,11 +17,13 @@
   }
 }
 .support__item {
+  height: 79px;
+  padding: 10px 10px 10px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: $white;
-  padding: 0px;
+  // padding: 0px;
   border-radius: 30px;
   &:not(:last-child) {
     margin-bottom: 10px;
