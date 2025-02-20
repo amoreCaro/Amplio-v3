@@ -161,6 +161,7 @@
 }
 @media (max-width: 768px) {
   .tabs {
+    padding-bottom: 160px;
     &__container {
       justify-content: center;
       align-items: center;
@@ -191,15 +192,16 @@
     }
 
     &__item {
-      height: auto;
+      height: 49px;
       & li {
-        font-size: 14px;
-        line-height: 16.8px;
+        font-size: 17px;
+        line-height: 17px;
       }
       & p {
         font-size: 28px;
         line-height: 33.6px;
-        width: 90%;
+        width: 100%;
+        max-width: 320px;
 
         & span {
           font-size: 32px;

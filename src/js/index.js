@@ -1,6 +1,5 @@
-
-import tabsLogic from './components/new/tabsLogic';
-import calculator from './components/new/calculator';
+import tabsLogic from './components/tabsLogic';
+import calculator from './components/calculator';
 
 $( document ).ready(function() {
     tabsLogic();

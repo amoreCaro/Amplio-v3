@@ -134,7 +134,6 @@ export default function calculator() {
         var creditSum = parseFloat(document.getElementById('inputCreditSum').value);
         var term = parseInt(document.getElementById('inputTerm').value);
 
-
         console.log("inputCreditSum: " + creditSum);
         console.log("term: " + term);
     }
