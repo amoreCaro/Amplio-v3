@@ -427,8 +427,10 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 375px) {
   .calculator {
+    padding-bottom: 64px;
+
     &__container {
       padding: 30px 18px;
       max-width: 355px;
@@ -448,6 +450,8 @@
       }
     }
     &__buttons {
+      margin-top: -12px;
+
       gap: 7px;
     }
     &__left {
@@ -456,6 +460,15 @@
     &__cta {
       background: none;
       margin-bottom: -30px;
+
+      &-top {
+        margin-top:6px;
+        &-text p  {
+          font-size: 13px;
+          margin-bottom: 7px;
+
+        }
+      }
       &-btn {
         margin-top: 36px;
       }
