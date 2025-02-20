@@ -54,7 +54,7 @@
 
 @media (max-width: 1024px) {
   .support {
-    // padding: 0px 22px;
+    padding: 0px 22px;
     &__container {
       padding: 60px 22px 58px 22px;
     }
@@ -121,7 +121,7 @@
 
 @media (max-width: 375px) {
   .support {
-    // padding: 0px 10px;
+    padding: 0px 10px;
     &__container {
       max-width: 355px;
       width: 100%;
@@ -129,8 +129,8 @@
       padding: 40px 18px;
       text-align: center;
       display: flex;
-      flex-direction: column; // Встановлюємо вирівнювання в колонку
-      justify-content: center; // Центруємо по вертикалі
+      flex-direction: column; 
+      justify-content: center;
       align-items: center;
     }
     &__title {
@@ -147,7 +147,6 @@
     }
     .support__item {
       height: 79px;
-      // padding-left: 20px;
       padding: 10px 10px 10px  20px;
       border-radius: 16px;
       & p {
