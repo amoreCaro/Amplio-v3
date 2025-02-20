@@ -121,7 +121,6 @@
       flex-direction: column;
     }
     &__item {
-   
       height: 79px;
       border-radius: 32px;
       padding: 10px 10px 10px 40px;
@@ -161,9 +160,13 @@
     }
 
     &__list {
+      // max-width: 320px;
+      // width: 100%;
       margin-top: 30px;
     }
     .support__item {
+      max-width: 320px;
+      width: 100%;
       height: 79px;
       padding: 10px 10px 10px 20px;
       border-radius: 16px;
