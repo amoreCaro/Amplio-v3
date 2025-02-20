@@ -199,13 +199,13 @@
 
 @media screen and (max-width: 375px) {
   .guide {
+    padding-bottom: 10px;
     &__container {
       max-width: 321px;
     }
 
     &__title {
-      max-width: 251px;
-      margin: 0 auto; // This centers the title
+      max-width: 262px;
       & h2 {
         font-size: 28px;
         line-height: 28px;
@@ -217,7 +217,7 @@
       display: block;
       margin-bottom: 48px;
       margin-left: 24px;
-      top: -9px;
+      top: -60px;
       position: relative;
 
       &-item {
@@ -226,7 +226,7 @@
         max-width: 250px;
         width: 100%;
         text-align: left;
-        margin-bottom: 40px;
+        margin-bottom: -68px;
         &-text {
           display: flex;
           justify-content: center;
@@ -238,8 +238,8 @@
           }
 
           & p {
-            margin-top: 0px;
-            font-size: 20px;
+            margin-top: 20px;
+            font-size: 18px;
             line-height: 24px;
             text-align: left;
           }
@@ -250,19 +250,21 @@
           left: 0px;
           width: 32px;
           height: 65px;
-          top: 94%;
+          top: 65%;
         }
       }
     }
 
     &__left {
-      margin-top: 80px;
+      max-width: 100%;
+      top: -70px;
       display: block;
       text-align: center;
       flex-direction: row;
       justify-content: center;
       align-items: center;
       & p {
+        text-align: left;
         font-size: 14px;
         line-height: 16.8px;
       }
