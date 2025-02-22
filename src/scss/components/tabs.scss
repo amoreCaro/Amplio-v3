@@ -103,6 +103,7 @@
 
 @media (max-width: 1024px) {
   .tabs {
+    padding-bottom: 121px;
     &__container {
       max-width: 962px;
     }
@@ -145,7 +146,8 @@
     &__btn {
       max-width: 240px !important;
       width: 100%;
-      margin-top: 30px;
+      margin-top: 14px;
+
     }
     &__decor {
       margin-top: 0px;

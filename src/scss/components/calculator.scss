@@ -460,21 +460,22 @@
     &__cta {
       background: none;
       margin-bottom: -30px;
-
+      &-img {
+        max-width: 48px;
+        width: 100%;
+        height: 48px;
+      }
       &-top {
-        margin-top:6px;
-        &-text p  {
+        margin-top: 6px;
+        &-text p {
           font-size: 13px;
           margin-bottom: 7px;
-
         }
       }
       &-btn {
         margin-top: 36px;
       }
-      & img {
-        max-width: 48px;
-      }
+
       &-top-info {
         & span {
           font-size: 14px;
@@ -501,6 +502,10 @@
           line-height: 20px;
         }
       }
+    }
+    .calculator__right {
+      width: 100%;
+      margin-top: -14px;
     }
     .calculator__info-item:not(:last-child) {
       margin-bottom: 30px;

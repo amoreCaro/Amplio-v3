@@ -128,13 +128,16 @@
   }
   .btn-medium {
     width: 100%;
-    min-width: 314px;
+    min-width: 256px;
     height: 60px;
     font-size: 16px;
     line-height: 16px;
     border-radius: 12px;
+    padding: 20px 40px;
     & img {
       margin-left: 18px;
+      max-width: 16px;
+      width: 100%;
     }
     &:hover {
       transition: $transition;
@@ -202,6 +205,11 @@
     border-radius: 16px;
     & img {
       margin-left: 18px;
+
+        margin-left: 18px;
+        max-width: 16px;
+        width: 100%;
+      
     }
     &:hover {
       transition: $transition;
