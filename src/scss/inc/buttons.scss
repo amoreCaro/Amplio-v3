@@ -1,4 +1,7 @@
 .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: none;
   border: none;
   cursor: pointer;
@@ -6,6 +9,13 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
+  }
+  &-green {
+    background-color: $accent-color;
+    color: $black;
+    &:hover {
+      transition: $transition;
+    }
   }
   &-tabs {
     font-weight: 400;
@@ -51,43 +61,45 @@
       transition: $transition;
     }
   }
-
-  &-primary {
+  &-large {
     width: 100%;
-    max-width: 260px;
+    min-width: 360px;
     height: 80px;
     font-weight: 400;
     font-size: 18px;
     line-height: 20px;
-    background-color: $accent-color;
-    color: $black;
     border-radius: 16px;
-    padding: 30px 36px;
-    display: flex;
-    align-items: center;
-    &:hover {
-      transition: $transition;
+    padding: 30px 66.5px;
+
+    & img {
+      margin-left: 25px;
     }
+
   }
-  &-large {
+  &-medium {
     width: 100%;
     min-width: 340px;
     height: 80px;
     font-weight: 400;
     font-size: 18px;
     line-height: 20px;
-    background-color: $accent-color;
-    color: $black;
     border-radius: 16px;
     padding: 30px 66.5px;
-    display: flex;
-    align-items: center;
     & img {
-      margin-left: 25px;
+      margin-left: 20px;
     }
-    &:hover {
-
-      transition: $transition;
+  }
+  &-small {
+    width: 100%;
+    min-width: 260px;
+    height: 80px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 16px;
+    padding: 30px 18.5px;
+    & img {
+      margin-left: 20px;
     }
   }
 }
@@ -101,16 +113,44 @@
     border-radius: 12px;
   }
   .btn-large {
+    border-radius: 12px;
     height: 60px;
-    min-width: 256px;
+    min-width: 240px;
     font-size: 16px;
     line-height: 16px;
-    padding: 22px 46px;
+    padding: 22px 26px;
     & img {
-      margin-left: 7px;
+      margin-left: 8px;
       max-width: 16px;
       width: 100%;
       height: 16px;
+    }
+  }
+  .btn-medium {
+    width: 100%;
+    min-width: 314px;
+    height: 60px;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 12px;
+    & img {
+      margin-left: 18px;
+    }
+    &:hover {
+      transition: $transition;
+    }
+  }
+  .btn-small {
+    width: 100%;
+    min-width: 240px;
+    height: 60px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 16px;
+    padding: 22px 18px;
+    & img {
+      margin-left: 20px;
     }
   }
   .btn-calculator-tabs {
@@ -140,13 +180,44 @@
     height: 80px;
   }
   .btn-large {
+    border-radius: 16px;
+    min-width: 360px;
     height: 80px;
-    min-width: 340px;
-    font-size: 20px;
-    line-height: 20px;
-    padding: 30px 48px;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 22px 46px;
     & img {
-      margin-left: 16px;
+      margin-left: 7px;
+      max-width: 16px;
+      width: 100%;
+      height: 16px;
+    }
+  }
+  .btn-medium {
+    width: 100%;
+    min-width: 340px;
+    height: 80px;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 16px;
+    & img {
+      margin-left: 18px;
+    }
+    &:hover {
+      transition: $transition;
+    }
+  }
+  .btn-small {
+    width: 100%;
+    min-width: 320px;
+    height: 80px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 16px;
+    padding: 22px 18px;
+    & img {
+      margin-left: 20px;
     }
   }
   .btn-tabs {
@@ -169,6 +240,21 @@
   .btn-calculator-tabs {
     height: 44px;
   }
+  .btn-medium {
+    padding: 20px 55px;
+    width: 100%;
+    min-width: 280px;
+    height: 60px;
+    font-size: 14px;
+    line-height: 16px;
+    border-radius: 16px;
+    & img {
+      margin-left: 8px;
+    }
+    &:hover {
+      transition: $transition;
+    }
+  }
 }
 @media screen and (max-width: 375px) {
   .btn-primary {
@@ -182,17 +268,30 @@
     line-height: 14px;
   }
   .btn-large {
-    min-width: 280px;
+    border-radius: 16px;
+    height: 60px;
+    min-width: 320px;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 22px 46px;
+    & img {
+      margin-left: 7px;
+      max-width: 16px;
+      width: 100%;
+      height: 16px;
+    }
+  }
+  .btn-small {
+    width: 100%;
+    min-width: 320px;
     height: 60px;
     font-weight: 400;
     font-size: 16px;
-    line-height: 16px;
-
+    line-height: 20px;
     border-radius: 16px;
-    padding: 20px 54px;
-
+    padding: 22px 18px;
     & img {
-      margin-left: 18px;
+      margin-left: 20px;
     }
   }
   .btn-tabs {

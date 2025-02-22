@@ -66,7 +66,7 @@
                 { title: "Щомісячна комісія", text: "<span>6,9%</span>" }
             ],
             btn: {
-                class: "btn-large",
+                class: "btn btn-green btn-large",
                 text: "Розрахувати кредит",
                 imgSrc: "img/calculator.png",
                 link: "/apply" 
@@ -148,7 +148,7 @@
             },
         ],
     btn: {
-        class: "btn-large",
+        class: "btn btn-green btn-medium",
         text: "Отримати кредит",
         imgSrc: "img/calculator.png",
         link: "/apply" 
@@ -185,7 +185,8 @@
     btn: {
       text: "Розрахувати кредит",
       imgSrc: "img/calculator.png",
-      class: "btn-primary",
+      
+      class: "btn btn-green btn-small",
     },
     text: "Натискаючи кнопку “Розрахувати кредит”  <br>ви даєте згоду на оброку персональних даних "
   }) %>
