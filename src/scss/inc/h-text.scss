@@ -23,22 +23,28 @@
   //   }
   // }
 
-  & ul {
+  ul {
     color: $text-color;
-    margin-left: 20px;
-
+    list-style: none; // прибирає стандартні маркери
+    padding-left: 0;  // прибирає відступ
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  
     &.colored-bullet li {
-      // margin-bottom: 32px;
-
-      &::marker {
-        color: $blue;
-        font-size: 21px;
-        margin-right: 12px;
-        margin-left: 4px;
-      }
+      display: flex;
+      align-items: center; // для центрованого вирівнювання маркера і тексту
+      margin-bottom: 16px; // за потребою для відступу між елементами списку
+    }
+  
+    &.colored-bullet li::before {
+      content: "\2022";  // встановлення символу маркера вручну
+      color: $blue;
+      font-size: 21px;
+      margin-right: 12px;
     }
   }
-
+  
   // & blockquote {
   //   color: $accent-color;
   //   font-weight: 400;
@@ -51,7 +57,7 @@
 @media (max-width: 375px) {
   .h-text {
     ul.colored-bullet li {
-      margin-bottom: 13px;
+      // margin-bottom: 13px;
     }
   }
 }
