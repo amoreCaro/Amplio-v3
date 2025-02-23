@@ -18,6 +18,11 @@
     }
   }
   &-tabs {
+<<<<<<< HEAD
+=======
+    flex: 1;
+    padding: 15px 20px;
+>>>>>>> d81471c (Add all files to repository)
     font-weight: 400;
     font-size: 18px;
     line-height: 21.6px;
@@ -159,6 +164,7 @@
   .btn-calculator-tabs {
     height: 30px;
   }
+<<<<<<< HEAD
   .btn-tabs {
     font-size: 14px;
     line-height: 16.8px;
@@ -174,6 +180,23 @@
       }
     }
   }
+=======
+  // .btn-tabs {
+  //   font-size: 14px;
+  //   line-height: 16.8px;
+
+  //   &::after {
+  //     content: "";
+  //     position: absolute;
+  //     bottom: -10px;
+  //   }
+  //   &.active {
+  //     &::after {
+  //       bottom: -10px;
+  //     }
+  //   }
+  // }
+>>>>>>> d81471c (Add all files to repository)
 }
 
 @media screen and (max-width: 768px) {
@@ -228,6 +251,7 @@
       margin-left: 20px;
     }
   }
+<<<<<<< HEAD
   .btn-tabs {
     font-size: 18px;
     line-height: 21.6px;
@@ -243,6 +267,23 @@
       }
     }
   }
+=======
+  // .btn-tabs {
+  //   font-size: 18px;
+  //   line-height: 21.6px;
+
+  //   &::after {
+  //     content: "";
+  //     position: absolute;
+  //     bottom: -14.5px;
+  //   }
+  //   &.active {
+  //     &::after {
+  //       bottom: -14.5px;
+  //     }
+  //   }
+  // }
+>>>>>>> d81471c (Add all files to repository)
 }
 @media (max-width: 425px) {
   .btn-calculator-tabs {
@@ -302,6 +343,7 @@
       margin-left: 20px;
     }
   }
+<<<<<<< HEAD
   .btn-tabs {
     font-size: 16px;
     line-height: 19.2px;
@@ -317,4 +359,21 @@
       }
     }
   }
+=======
+  // .btn-tabs {
+  //   font-size: 16px;
+  //   line-height: 19.2px;
+
+  //   &::after {
+  //     content: "";
+  //     position: absolute;
+  //     bottom: -10px;
+  //   }
+  //   &.active {
+  //     &::after {
+  //       bottom: -10px;
+  //     }
+  //   }
+  // }
+>>>>>>> d81471c (Add all files to repository)
 }

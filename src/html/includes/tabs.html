@@ -19,8 +19,13 @@
       <% groupItems.forEach(function(groupItem) { %>
         <div class="tabs__list" id="<%= groupItem.id %>">
           <% groupItem.items.forEach(function(item) { %>
+<<<<<<< HEAD
             <div class="tabs__item">
               <ul class="colored-bullet">
+=======
+            <div class="tabs__item ">
+              <ul class="colored-bullet <%= groupItem.classes %>">
+>>>>>>> d81471c (Add all files to repository)
                 <li><%= item.title %></li>
               </ul>
               <p><%= item.text %></p>
@@ -29,6 +34,10 @@
         </div>
       <% }); %>
       
+<<<<<<< HEAD
+=======
+      
+>>>>>>> d81471c (Add all files to repository)
             <!-- Move the button section here -->
             <% groupItems.forEach(function(groupItem) { %>
               <% if (groupItem.btn) { %>
