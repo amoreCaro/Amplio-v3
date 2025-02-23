@@ -19,14 +19,20 @@
 .support__item {
   height: 79px;
   padding: 10px 10px 10px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
   background-color: $white;
   // padding: 0px;
   border-radius: 30px;
   &:not(:last-child) {
     margin-bottom: 10px;
+  }
+  &-button {
+    font-family: 'Geologica', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
   }
   &-text {
     text-align: left;
@@ -37,6 +43,8 @@
     }
 
     & p {
+      font-family: 'Geologica', sans-serif;
+      font-weight: 400;
       font-size: 24px;
       line-height: 24px;
       color: $black;
