@@ -1,5 +1,5 @@
 export default function accordion() {
-    $(".support__item").on("click", function() {
+    $(".faq__item").on("click", function() {
       const tabsId = $(this).data("tabTarget");  // Отримуємо значення з data-tab-target
   
       // Додаємо клас 'active' на клікнутий елемент і забираємо з його братів
@@ -18,7 +18,7 @@ export default function accordion() {
       $("#" + tabsId).addClass("active").siblings().removeClass("active");
     });
   
-    $(".support__item-content").on("click", function(e) {
+    $(".faq__item-content").on("click", function(e) {
       // Запобігаємо кліку на підтримуючому елементі, щоб не було конфлікту
       e.stopPropagation();
   

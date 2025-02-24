@@ -239,7 +239,7 @@
 }) %>
 
 
-<%= _.template(require('./../includes/support.html').default)({
+<%= _.template(require('./../includes/faq.html').default)({
   additionalClass: "", 
   title: "Відповідаємо на часті запитання",
   supportList: [

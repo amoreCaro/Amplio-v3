@@ -1,4 +1,4 @@
-.support {
+.faq {
   &__container {
     padding: 75.22px 60px 71.34px 60px;
     background-color: $blue-bg;
@@ -16,11 +16,11 @@
     margin-top: 65px;
   }
 }
-.support__item {
+
+.faq__item {
   height: 79px;
   padding: 10px 10px 10px 30px;
   background-color: $white;
-  // padding: 0px;
   border-radius: 30px;
   &:not(:last-child) {
     margin-bottom: 10px;
@@ -35,12 +35,6 @@
   }
   &-text {
     text-align: left;
-    & h2 {
-      font-weight: 400;
-      font-size: 56px;
-      line-height: 56px;
-    }
-
     & p {
       font-family: "Geologica", sans-serif;
       font-weight: 400;
@@ -58,17 +52,17 @@
     }
   }
 }
-.support__item .active {
+
+.faq__item .active {
   border-radius: 30px 30px 0px 0px;
 }
 
-.support__item-content {
+.faq__item-content {
   position: relative;
   top: -10px;
   display: none;
   overflow: hidden;
   height: 0;
-
   transition: height 0.3s ease;
   border-radius: 0px 0px 30px 30px;
   &:not(:last-child) {
@@ -91,7 +85,7 @@
 }
 
 @media (max-width: 1024px) {
-  .support {
+  .faq {
     padding: 0px 22px;
     &__container {
       padding: 60px 22px 58px 22px;
@@ -100,16 +94,11 @@
       font-size: 32px;
       line-height: 32px;
     }
-    & p {
-      font-size: 18px;
-      line-height: 18px;
-      color: $black;
-    }
     &__list {
       margin-top: 30px;
     }
   }
-  .support__item {
+  .faq__item {
     padding-left: 20px;
     border-radius: 16px;
     height: 60px;
@@ -125,12 +114,11 @@
 }
 
 @media (max-width: 768px) {
-  .support {
-    // padding: 0px 44px;
+  .faq {
     &__container {
       max-width: 680px;
       display: flex;
-      justify-content: center; /* Центрування по горизонталі */
+      justify-content: center;
       align-items: center;
       flex-direction: column;
       padding: 60px 40px;
@@ -143,12 +131,6 @@
         text-align: center;
       }
     }
-
-    & p {
-      font-size: 18px;
-      line-height: 18px;
-      color: $black;
-    }
     &__list {
       max-width: 600px;
       width: 100%;
@@ -158,7 +140,7 @@
       align-items: center;
       flex-direction: column;
     }
-    &__item {
+    .faq__item {
       width: 100%;
       height: 79px;
       border-radius: 32px;
@@ -176,7 +158,7 @@
 }
 
 @media (max-width: 375px) {
-  .support {
+  .faq {
     padding: 0px 10px;
     &__container {
       max-width: 355px;
@@ -199,11 +181,9 @@
     }
 
     &__list {
-      // max-width: 320px;
-      // width: 100%;
       margin-top: 30px;
     }
-    .support__item {
+    .faq__item {
       max-width: 320px;
       width: 100%;
       height: 79px;
