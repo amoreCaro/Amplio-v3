@@ -19,13 +19,8 @@
       <% groupItems.forEach(function(groupItem) { %>
         <div class="tabs__list" id="<%= groupItem.id %>">
           <% groupItem.items.forEach(function(item) { %>
-<<<<<<< HEAD
             <div class="tabs__item">
-              <ul class="colored-bullet">
-=======
-            <div class="tabs__item ">
               <ul class="colored-bullet <%= groupItem.classes %>">
->>>>>>> d81471c (Add all files to repository)
                 <li><%= item.title %></li>
               </ul>
               <p><%= item.text %></p>
@@ -33,26 +28,22 @@
           <% }); %>
         </div>
       <% }); %>
-      
-<<<<<<< HEAD
-=======
-      
->>>>>>> d81471c (Add all files to repository)
-            <!-- Move the button section here -->
-            <% groupItems.forEach(function(groupItem) { %>
-              <% if (groupItem.btn) { %>
-                <div class="tabs__btn">
-                  <a href="<%= groupItem.btn.link %>" class="btn <%= groupItem.btn.class %>">
-                    <%= groupItem.btn.text %>
-                    <img src="<%= groupItem.btn.imgSrc %>" alt="Button Image" />
-                  </a>
-                </div>
-              <% } %>
-            <% }); %>
+
+      <!-- Move the button section here -->
+      <% groupItems.forEach(function(groupItem) { %>
+        <% if (groupItem.btn) { %>
+          <div class="tabs__btn">
+            <a href="<%= groupItem.btn.link %>" class="btn <%= groupItem.btn.class %>">
+              <%= groupItem.btn.text %>
+              <img src="<%= groupItem.btn.imgSrc %>" alt="Button Image" />
+            </a>
+          </div>
+        <% } %>
+      <% }); %>
     </div>
 
-      <div class="tabs__decor">
-        <img src="<%= decor %>" alt="Tabs Decoration" />
-      </div>
+    <div class="tabs__decor">
+      <img src="<%= decor %>" alt="Tabs Decoration" />
+    </div>
   </div>
 </section>

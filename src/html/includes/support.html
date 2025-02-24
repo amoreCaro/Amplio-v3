@@ -5,7 +5,7 @@
     </div>
     <div class="support__list">
       <% supportList.forEach(function(item, index) { %>
-        <div class="support__item" data-tab-target="tab<%= index %>"> <!-- Додаємо data-tab-target -->
+        <div class="support__item" data-tab-target="tab<%= index %>">
           <button class="btn support__item-button">
             <div class="support__item-text">
               <p><%= item.text %></p>
@@ -19,7 +19,7 @@
           </button>
          
         </div>
-        <div class="support__item-content" id="tab<%= index %>"> <!-- ID для відповідного контенту -->
+        <div class="support__item-content" id="tab<%= index %>"> 
           <p><%= item.contentText %></p>
         </div>
       <% }); %>
