@@ -20,10 +20,14 @@
         <div class="tabs__list" id="<%= groupItem.id %>">
           <% groupItem.items.forEach(function(item) { %>
             <div class="tabs__item">
-              <ul class="colored-bullet <%= groupItem.classes %>">
-                <li><%= item.title %></li>
-              </ul>
-              <p><%= item.text %></p>
+              <div class="tabs__item-col tabs__item-title <%= groupItem.classes %>">
+                <ul class="colored-bullet ">
+                  <li><%= item.title %></li>
+                </ul>
+              </div>
+              <div class="tabs__item-col tabs__item-text">
+                <p><%= item.text %></p>
+              </div>
             </div>
           <% }); %>
         </div>

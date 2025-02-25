@@ -39,6 +39,9 @@
     align-items: center;
     text-align: left;
     height: 60px;
+    &-col {
+      width: 50%
+    }
     & li {
       color: $gray;
       font-weight: 400;
