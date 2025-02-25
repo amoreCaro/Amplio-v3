@@ -427,7 +427,31 @@
     }
   }
 }
-@media (max-width: 375px) {
+// @media (max-width: 425px){
+//   .calculator  {
+    // &__info {
+    //   display: block;
+    //   border-radius: 24px;
+    //   margin-left: 0px;
+    //   background: #f5f5f5;
+    //   padding: 20px;
+    //   width: 100%;
+    //   gap: 30px;
+    //   &-text {
+    //     & p {
+    //       font-size: 12px;
+    //       line-height: 14px;
+    //     }
+    //     & span {
+    //       font-size: 20px;
+    //       line-height: 20px;
+    //     }
+    //   }
+    // }
+//   }
+
+// }
+@media (max-width: 425px) {
   .calculator {
     padding-bottom: 64px;
 
