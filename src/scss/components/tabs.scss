@@ -117,6 +117,7 @@
   .tabs {
     padding-bottom: 121px;
     &__container {
+      align-items: center;
       max-width: 962px;
     }
     &__title {
@@ -224,7 +225,7 @@
     }
 
     &__btn {
-      max-width: 360px !important;
+      min-width: 100% !important;
       width: 100%;
       margin-top: 48px;
       margin-bottom: 92px;

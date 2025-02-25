@@ -33,8 +33,7 @@
   
     &.colored-bullet li {
       display: flex;
-      align-items: center; // для центрованого вирівнювання маркера і тексту
-      margin-bottom: 16px; // за потребою для відступу між елементами списку
+      align-items: center;
     }
   
     &.colored-bullet li::before {
