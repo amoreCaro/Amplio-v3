@@ -157,6 +157,7 @@
         text: "Отримати кредит",
         imgSrc: "img/calculator.png",
         link: "/apply" 
+        
     }
 }) %>
 

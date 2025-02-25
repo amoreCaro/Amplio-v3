@@ -130,15 +130,15 @@ export default function calculator() {
         });
     }
     function calculateMounthPayment() {
-        // Get the values from the inputs
-        var creditSum = parseFloat(document.getElementById('inputCreditSum').value);
-        var term = parseInt(document.getElementById('inputTerm').value);
-
+        // Get the values from the inputs using jQuery
+        var creditSum = parseInt($('#inputCreditSum').val());
+        var term = parseInt($('#inputTerm').val());
+    
         console.log("inputCreditSum: " + creditSum);
         console.log("term: " + term);
     }
-
-
+    
+    
 
     // Викликаємо функції
     initializeInputs();

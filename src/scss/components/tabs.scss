@@ -38,7 +38,7 @@
     justify-content: space-between;
     align-items: center;
     text-align: left;
-    height: 49px;
+    height: 60px;
     & li {
       color: $gray;
       font-weight: 400;
@@ -68,7 +68,7 @@
   &__btn {
     max-width: 360px;
     width: 100%;
-    margin-top: 124px;
+    margin-top: 20px;
   }
   &__decor {
     margin-top: 80px;
@@ -96,13 +96,19 @@
 
 .tabs__list.active {
   display: block;
+  overflow: auto;
+  height: 350px;
+  width: 100%;
+  margin-top: 20px;
+  padding-right: 20px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #2046d2 #e2e7f8;
 }
 
 .tabs--full {
   min-width: 100%;
 }
-
-
 
 @media (max-width: 1024px) {
   .tabs {
@@ -130,7 +136,7 @@
       margin-bottom: 48px;
     }
     &__item {
-      height: 34px;
+      // height: 34px;
       & li {
         font-size: 14px;
         line-height: 16.8px;
@@ -150,7 +156,6 @@
       max-width: 240px !important;
       width: 100%;
       margin-top: 14px;
-
     }
     &__decor {
       margin-top: 0px;
@@ -197,7 +202,7 @@
     }
 
     &__item {
-      height: 49px;
+      height: 80px;
       & li {
         font-size: 17px;
         line-height: 17px;
@@ -232,7 +237,7 @@
         max-height: 633px;
         width: 100%;
         height: 100%;
-        object-fit: cover; 
+        object-fit: cover;
         border-radius: 48px;
       }
     }
@@ -270,7 +275,7 @@
         font-size: 14px;
         line-height: 16.8px;
         margin-bottom: 13px;
-        width: 100px;
+        // width: 100px;
         margin-right: 30px;
       }
       & p {
