@@ -8,7 +8,10 @@
         <div class="credit__list-item">
           <div class="credit__list-item-text">
             <h3><%= item.title %></h3>
-            <p><%= item.text %></p>
+            <% item.text.forEach(function(paragraph) { %>
+              <p><%= paragraph %></p>
+            <% }); %>
+            <button class="credit__item-btn">Детальніше</button>
           </div>
 
           <% if (item.image && item.image.length > 0) { %>
