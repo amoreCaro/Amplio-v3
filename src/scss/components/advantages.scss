@@ -10,7 +10,7 @@
     margin-bottom: 40px;
     h2 {
       font-size: 56px;
-      line-height: 56px;
+      line-height: 67.2px;
       color: $black;
       margin-bottom: 20px;
       font-weight: 400;
@@ -132,24 +132,23 @@
       width: 100%;
     }
     &__title {
-      max-width: 291px;
-      margin-bottom: 30px;
+      // max-width: 291px;
+      margin-bottom: 40px;
       & h2 {
-        font-size: 30px;
-        line-height: 32px;
+        font-size: 56px;
+        line-height: 67px;
         margin-bottom: 20px;
       }
       & p {
-        max-width: 244px;
-        font-size: 12px;
-        line-height: 14.46px;
+        font-size: 16px;
+        line-height: 18px;
         color: $black;
       }
     }
     &__list {
       max-width: 940px;
       width: 100%;
-      gap: 20px; 
+      gap: 20px;
     }
     &__item {
       max-width: 300px;
@@ -190,16 +189,15 @@
       width: 100%;
     }
     &__title {
-      text-align: center;
+      text-align: left;
       max-width: 100%;
       display: flex;
       flex-direction: column;
-      align-items: center;
       margin-bottom: 40px;
 
       & h2 {
-        font-size: 48px;
-        line-height: 48px;
+        font-size: 56px;
+        line-height: 67px;
         margin-bottom: 28px;
       }
 
@@ -306,8 +304,8 @@
       display: flex;
       align-items: center;
       &:not(:last-child) {
-      margin-bottom: 8px; 
-    }
+        margin-bottom: 8px;
+      }
       & img {
         max-width: 100%;
         height: auto;
