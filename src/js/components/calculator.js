@@ -130,6 +130,7 @@ export default function calculator() {
         });
     }
 
+
     // Викликаємо функцію при зміні значень інпутів
     $('#inputCreditSum_range, #inputTerm_range').on('input', function () {
         calculateMounthPayment();
@@ -172,11 +173,23 @@ export default function calculator() {
             var monthlyPayment = (creditSum / term);
 
             // Виведення результату в span
-            $('#monthlyPaymentOutput').text(monthlyPayment.toFixed(2) + " грн");
+            $('#monthlyPaymentOutput').text(monthlyPayment.toFixed(2) + " грн/міс");
         } else {
             $('#monthlyPaymentOutput').text("Термін не може бути меншим або рівним нулю");
         }
     }
+
+    function calculateTotalLoanCost() {
+        // Отримуємо значення з інпутів
+        var creditSum = parseInt($('#inputCreditSum').val());
+
+        // Формула для розрахунку місячного платежу (простий приклад)
+        var totalLoanCost = (creditSum * 1.5);
+
+        // Виведення результату в span
+        $('#totalLoanCostOutput').text(totalLoanCost.toFixed(2) + " грн");
+    }
+
 
     // Викликаємо функції
     initializeInputs();
@@ -185,5 +198,6 @@ export default function calculator() {
     setActiveTab();
     handleTabClick();
     calculateMounthPayment();
+    calculateTotalLoanCost();
 }
 

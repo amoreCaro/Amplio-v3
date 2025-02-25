@@ -40,8 +40,10 @@
     align-items: center;
     text-align: left;
     height: 60px;
+    border-bottom: 1px solid #ebeefa !important;
+    margin-bottom: 12px !important;
     &-col {
-      width: 50%
+      width: 100%
     }
     & li {
       color: $gray;
@@ -64,10 +66,6 @@
     }
   }
 
-  .tabs__item:not(:last-child) {
-    border-bottom: 1px solid $text-color--light !important;
-    margin-bottom: 12px !important;
-  }
 
   &__btn {
     max-width: 360px;
@@ -277,19 +275,16 @@
     }
     &__item {
       & li {
-        font-size: 14px;
-        line-height: 16.8px;
-        margin-bottom: 13px;
-        // width: 100px;
-        margin-right: 30px;
+        font-size: 18px;
+        line-height: 18px;
       }
       & p {
         font-size: 14px;
         line-height: 16.8px;
-        width: 90%;
+        width: 100%;
 
         & span {
-          font-size: 24px;
+          font-size: 28px;
           line-height: 28px;
         }
       }
