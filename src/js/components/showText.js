@@ -1,6 +1,6 @@
 export default function showText() {
     // Перевіряємо кількість параграфів у кожному елементі
-    $('.credit__list-item-text').each(function () {
+    $('.credit__item-text').each(function () {
         var paragraphs = $(this).find('p');
         var toggleButton = $(this).find('.credit__item-btn');
 
