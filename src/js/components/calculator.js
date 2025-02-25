@@ -129,16 +129,54 @@ export default function calculator() {
             }
         });
     }
+
+    // Викликаємо функцію при зміні значень інпутів
+    $('#inputCreditSum_range, #inputTerm_range').on('input', function () {
+        calculateMounthPayment();
+    });
+
+    // Викликаємо функцію при зміні значень інпутів
+    $('#inputCreditSum, #inputTerm').on('input', function () {
+        calculateMounthPayment();
+    });
+
+    // Додаємо подію для кнопок з класом btn-calculator-tabs
+    $('.btn-calculator-tabs').on('click', function () {
+        // Отримуємо значення кнопки
+        var value = $(this).data('value');  // Припускаємо, що у кнопки є data-атрибут 'data-value'
+
+        // Перевіряємо, яка кнопка була натиснута (наприклад, це може бути термін або сума)
+        if ($(this).hasClass('btn-credit-sum')) {
+            $('#inputCreditSum').val(value);
+        } else if ($(this).hasClass('btn-term')) {
+            $('#inputTerm').val(value);
+        }
+
+        // Перераховуємо місячний платіж
+        calculateMounthPayment();
+    });
+
+
     function calculateMounthPayment() {
-        // Get the values from the inputs using jQuery
+        // Отримуємо значення з інпутів
         var creditSum = parseInt($('#inputCreditSum').val());
         var term = parseInt($('#inputTerm').val());
-    
+
+        // Логування значень для перевірки
         console.log("inputCreditSum: " + creditSum);
         console.log("term: " + term);
+
+        // Перевірка, щоб уникнути ділення на 0
+        if (term > 0) {
+            // Формула для розрахунку місячного платежу (простий приклад)
+            var monthlyPayment = (creditSum / term);
+
+            // Виведення результату в span
+            $('#monthlyPaymentOutput').text(monthlyPayment.toFixed(2) + " грн");
+        } else {
+            $('#monthlyPaymentOutput').text("Термін не може бути меншим або рівним нулю");
+        }
     }
-    
-    
 
     // Викликаємо функції
     initializeInputs();
@@ -148,3 +186,4 @@ export default function calculator() {
     handleTabClick();
     calculateMounthPayment();
 }
+

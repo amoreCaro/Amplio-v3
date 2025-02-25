@@ -120,7 +120,7 @@
         ],
         ctaImageUrl: "img/calcuator-wallet.png", 
         ctaText: "Щомісячний платіж", 
-        ctaSubtitle: "27 000 грн",
+        ctaSubtitle: "",
         additionalInfo: "Ці розрахунки є орієнтовними", 
         infoSections: [
             {
