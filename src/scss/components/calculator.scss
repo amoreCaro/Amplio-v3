@@ -76,9 +76,9 @@
     }
   }
   &__info {
-    left: 8px;
+    // left: 8px;
     margin-left: 29px;
-    bottom: -38px;
+    // bottom: -38px;
     position: relative;
 
     &-item {
@@ -517,6 +517,7 @@
       }
     }
     &__info {
+      left: 0px;
       display: block;
       border-radius: 24px;
       margin-left: 0px;
