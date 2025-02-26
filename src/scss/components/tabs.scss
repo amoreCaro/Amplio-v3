@@ -1,5 +1,5 @@
 .tabs {
-  padding: 0px 0px 108px 0px;
+  // padding: 0px 0px 108px 0px;
   &__container {
     align-items: center;
     max-width: 1220px;
@@ -9,7 +9,7 @@
   }
 
   &__title {
-    margin-bottom: 60px;
+
 
     & h2 {
       color: $black;
@@ -26,7 +26,10 @@
   }
 
   &__buttons {
+    margin-top: 60px;
     display: flex;
+    top: -25px;
+    position: relative;
   }
   &__list {
     display: none;
