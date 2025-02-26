@@ -36,9 +36,8 @@
     max-width: 400px;
     width: 100%;
     margin-bottom: 80px;
-    max-height: 280px;
+    max-height: 250px;
     height: 100%;
-
 
     &-img {
       max-width: 60px;
@@ -381,7 +380,7 @@
     &__cta {
       max-width: 100%;
       justify-content: center;
-      align-items: center;
+      align-items: left;
       display: flex;
       flex-direction: column;
       &-btn {
@@ -393,7 +392,7 @@
       }
       &-top {
         margin-bottom: 0px;
-        margin-left: -48px;
+        margin-left: 0px;
 
         &-text {
           & p {
@@ -408,10 +407,9 @@
     }
     &__info {
       display: flex;
-      align-items: center;
-      gap: 46px;
-      margin-left: 13px;
-      bottom: -18px;
+      flex-direction: column;
+      gap: 20px;
+      padding: 0px 30px;
       position: relative;
 
       &-item:not(:last-child) {
@@ -432,25 +430,25 @@
 }
 // @media (max-width: 425px){
 //   .calculator  {
-    // &__info {
-    //   display: block;
-    //   border-radius: 24px;
-    //   margin-left: 0px;
-    //   background: #f5f5f5;
-    //   padding: 20px;
-    //   width: 100%;
-    //   gap: 30px;
-    //   &-text {
-    //     & p {
-    //       font-size: 12px;
-    //       line-height: 14px;
-    //     }
-    //     & span {
-    //       font-size: 20px;
-    //       line-height: 20px;
-    //     }
-    //   }
-    // }
+// &__info {
+//   display: block;
+//   border-radius: 24px;
+//   margin-left: 0px;
+//   background: #f5f5f5;
+//   padding: 20px;
+//   width: 100%;
+//   gap: 30px;
+//   &-text {
+//     & p {
+//       font-size: 12px;
+//       line-height: 14px;
+//     }
+//     & span {
+//       font-size: 20px;
+//       line-height: 20px;
+//     }
+//   }
+// }
 //   }
 
 // }
@@ -460,13 +458,12 @@
 
     &__container {
       padding: 30px 18px;
-      max-width: 355px;
+      max-width: 425px;
       width: 100%;
       border-radius: 24px;
     }
     &__content-inner {
       padding: 20px 0px;
-
     }
     .calculator__title {
       margin-bottom: 30px;
@@ -478,14 +475,13 @@
       }
     }
     &__buttons {
+      justify-content: space-between;
       margin-top: -12px;
-
       gap: 7px;
     }
     &__left {
       margin-bottom: 4px;
       padding: 0px 20px;
-
     }
     &__cta {
       background: none;
@@ -522,6 +518,7 @@
       padding: 20px;
       width: 100%;
       gap: 30px;
+      bottom: -20px;
       &-text {
         & p {
           font-size: 12px;
@@ -546,9 +543,9 @@
   }
   .calculator__cta-top {
     margin-left: 0px;
-}
+  }
   .calculator__cta-top-text span {
     font-size: 24px;
     line-height: 24px;
-}
+  }
 }
