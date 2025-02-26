@@ -30,12 +30,15 @@
   }
   &__cta {
     display: block;
-    background-color: $blue-bg;
+    background-color: #edf0fa;
     padding: 30px;
     border-radius: 32px;
     max-width: 400px;
     width: 100%;
-    margin-bottom: 82px;
+    margin-bottom: 80px;
+    max-height: 280px;
+    height: 100%;
+
 
     &-img {
       max-width: 60px;
