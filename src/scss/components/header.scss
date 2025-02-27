@@ -1,3 +1,26 @@
+.header--fixed {
+  background-color: transparent !important;
+  position: relative; // Ensure that the pseudo-element is positioned relative to the header
+
+}
+.header--fixed:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  top: -30px;
+  left: 0;
+  background: linear-gradient(to bottom, #f0f0f0, transparent);
+  -webkit-filter: blur(5px);
+  filter: blur(5px) ;
+  z-index: -10;
+}
+
+
+.header--mobile {
+  background: $white;
+}
+
 .header {
   position: fixed;
   left: 0;
@@ -5,9 +28,13 @@
   z-index: 100;
   width: 100%;
   background-color: $white;
-  padding: 30px 0px;
+  padding: 20px 0px;
+  max-height: 120px;
+  height: 100%;
 
   &__container {
+    border-radius: 16px;
+    padding: 10px;
     max-width: 1160px;
     align-items: center;
     display: flex;
@@ -46,6 +73,9 @@
       align-items: center;
       gap: 60px;
     }
+    li {
+      list-style: none;
+    }
 
     a {
       display: flex;
@@ -75,9 +105,12 @@
     transition: 0.3s ease;
 
     svg {
-      width: 24px;
-      height: 24px;
+      width: 100%; /* Задаємо ширину 100% від контейнера */
+      height: 100%; /* Задаємо висоту 100% від контейнера */
+      max-width: 24px; /* Не дозволяємо SVG перевищувати 24px по ширині */
+      max-height: 24px; /* Не дозволяємо SVG перевищувати 24px по висоті */
     }
+
     &-call {
       width: 100%;
       max-width: 60px;
@@ -85,7 +118,7 @@
       &:hover {
         background: $blue;
         svg path {
-          stroke: $white; /* Change stroke color on hover */
+          stroke: $white;
         }
       }
     }
@@ -99,23 +132,52 @@
       display: flex;
       justify-content: center;
       align-items: center;
-    
+
       &:hover {
         border-color: $blue;
         color: $blue;
-
-        /* Apply stroke color change to the SVG on container hover */
         svg path {
-          stroke: $blue; /* Change stroke color on hover */
+          stroke: $blue;
         }
       }
-    
-      /* Initial stroke color for SVG */
-      // svg path {
-      //   stroke: $black; /* Set initial stroke color */
-      //   transition: stroke 0.3s ease;
-      // }
     }
-    
+    &-menu {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 10px 0px;
+    max-height: 100px;
+    background: none;
+    &__container {
+      width: 90%;
+      background: $white;
+      padding: 0px 12px;
+      border-radius: 20px;
+    }
+    &__nav {
+      display: none;
+    }
+    &__actions {
+      padding: 10px;
+      max-width: 320px;
+      width: 100%;
+    }
+    .header__button-menu {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+
+      width: 100%;
+      max-width: 60px;
+      background-color: #e6e6e6;
+      border-radius: 12px;
+      padding: 10px;
+      cursor: pointer;
+      position: relative;
+    }
   }
 }
