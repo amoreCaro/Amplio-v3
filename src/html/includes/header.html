@@ -17,9 +17,42 @@
     <link rel="stylesheet" href="css/style.bundle.css" />
 
     <title>Amplio |
-        <%=title%>
     </title>
 </head>
 
 <body>
     <div class="l-wrapper">
+        <header class="header <%= additionalClass %>">
+            <div class="header__container container">
+                <!-- Logo Section -->
+                <div class="header__logo">
+                    <a href="<%= logoLink %>">
+                        <!-- Dynamically load SVG logo -->
+                        <%= logoSvg %> 
+                    </a>   
+                </div>
+        
+                <!-- Navigation Section -->
+                <nav class="header__nav">
+                    <ul>
+                        <% navLinks.forEach(function(link) { %>
+                            <li>
+                                <a href="<%= link.href %>"><%= link.text %></a>
+                            </li>
+                        <% }); %>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <% buttons.forEach(function(button) { %>
+                        <a class="btn <%= button.class %>">
+                            <span><%= button.text %></span>
+                            <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <%= button.svg %>
+                            </svg>
+                        </a>
+                    <% }); %>
+                </div>
+                
+            </div>
+        </header>
+        
